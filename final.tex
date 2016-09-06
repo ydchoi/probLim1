@@ -88,6 +88,15 @@ This work contains solutions to the exercises of the problem set I.
 \end{question}
 \begin{solution} \hfill \\
 
+\textbf{(ii)} Define $A_0 = \emptyset$ and 
+\eQb
+\tilde{A}_k &=& A_k \setminus A_{k-1} \> \> (k \in \mathbb{N}). 
+\eQe  
+Then, by countable additivity, we have
+\eQb
+\mathbb{P}(\bigcup_{k} 
+\eQe
+
 \end{solution}
 
 \newpage
@@ -135,7 +144,8 @@ The above result shows that $\bigcap_{\alpha}
 $\mathscr{F}$. Obviously, for any $\alpha$, $
 \bigcap_{\alpha} \mathscr{G}_\alpha \subset \mathscr{G}_{\alpha}$, 
 which tells us that any $\sigma$-algebra
-containing $\mathscr{F}$ contains $\mathscr{G}_{\alpha}$, so it follows that
+containing $\mathscr{F}$ contains $\bigcap_{\alpha} 
+\mathscr{G}_{\alpha}$, so it follows that
 $\bigcap_{\alpha} \mathscr{G}_{\alpha}$ is the smallest $\sigma$-algebra containing
 $\mathscr{F}$ and notationally we have 
 \eQb
@@ -171,6 +181,57 @@ as required. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(a)} Let $f$ be a simple function, e.g. 
+\eQb
+f &=& \sum_{i=1}^{n} a_i X_{E_i},
+\eQe
+where $a_i \in \mathbb{R}$, $E_i \in \mathscr{F}$ pairwise disjoint
+for $1 \leq i \leq n$, and $\bigcup_{i=1}^{n} E_i = \Omega$.
+For sake of completeness, we show that $f$ is $(\mathscr{F},\mathscr{B}_{\mathbb{R}})$
+measurable. For any $a \in \mathbb{R}$, observe that $f^{-1}((-\infty,a])$ 
+is a union of sub-collection (allowing the empty collection) of $\{ E_i \}$, so
+it is in $\mathscr{F}$. Hence, any simple function is $(\mathscr{F},
+\mathscr{B}_{\mathbb{R}})$ measurable.  
+
+\bigskip
+
+Fix $a \in \mathbb{R}$. 
+As $f^{-1}(-\infty) = \emptyset$ and 
+$f$ is $(\mathscr{F},\mathscr{B}_{\mathbb{R}})$ measurable, it follows that 
+\eQb
+f^{-1}([-\infty,a]) &=& f^{-1}((-\infty,a]) \in \mathscr{F}.
+\eQe
+So, $f$ is $(\mathscr{F}, \mathscr{B}_{\mathbb{[-\infty,\infty]}})$ measurable.
+
+\bigskip
+
+\textbf{(b)} Observe that 
+\eQb
+\liminf_{n \to \infty} X_n &=& \inf_k \sup_{n \geq k} X_n\\
+\limsup_{n \to \infty} X_n &=& \sup_k \inf_{n \geq k} X_n\\.
+\eQe
+Hence, with symmetry of $\inf$ and $\sup$, it suffices to show that
+$\sup_n X_n$ is measurable.
+
+
+Fix $a \in \mathbb{R}$. Then, we have
+\eQb
+(\sup_n X_n)^{-1}([-\infty,a]) &=& \bigcap_n X_n^{-1} ([-\infty,a]) \in \mathscr{F}.
+\eQe 
+So, $\sup X_n$ is measurable. 
+
+\bigskip
+
+Let $\mathscr{G}$ be a class of functions such that $(a)$ and $(b)$ are true. 
+We wish to show that $m\mathscr{F} \subset \mathscr{G}$. By $(a)$, we know that
+simple functions are in $\mathscr{G}$. Now, if $f \in m\mathscr{F}$, then
+by the simple approximation lemma, there exists a sequence of simple functions
+$\{X_n \}$ such that $X_n$ converges pointwise to $f$. Then, by $(b)$,
+\eQb
+f = \limsup_{n \to \infty} X_n \in \mathscr{G},
+\eQe 
+so $m\mathscr{F} \subset \mathscr{G}$, and $m\mathscr{F}$ is the smallest class
+of functions satisfying properties $(a)$ and $(b)$.
 
 \end{solution}
 \newpage
