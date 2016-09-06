@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 SEP 2016 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 SEP 2016 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,7 +445,7 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-No file final.aux.
+(./final.aux)
 \openout1 = `final.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -463,7 +463,7 @@ LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 70.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box36
@@ -494,6 +494,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 70.
 LaTeX Info: Redefining \pageref on input line 70.
 LaTeX Info: Redefining \nameref on input line 70.
+
+(./final.out) (./final.out)
 \@outlinefile=\write3
 \openout3 = `final.out'.
 
@@ -539,255 +541,78 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
 
+<problim-e1-p1.png, id=4, 622.325pt x 110.4125pt>
+File: problim-e1-p1.png Graphic file (type png)
+ <use problim-e1-p1.png>
+Package pdftex.def Info: problim-e1-p1.png used on input line 85.
+(pdftex.def)             Requested size: 278.23827pt x 49.36505pt.
 
-LaTeX Warning: File `pm-f-1.png' not found on input line 86.
-
-
-! Package pdftex.def Error: File `pm-f-1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.86 ...egraphics[width=0.7\textwidth]{pm-f-1.png}
-                                                  
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./probl
+im-e1-p1.png>] <problim-e1-p2.png, id=16, 623.32875pt x 122.4575pt>
+File: problim-e1-p2.png Graphic file (type png)
 
-LaTeX Warning: File `pm-f-2.png' not found on input line 99.
+<use problim-e1-p2.png>
+Package pdftex.def Info: problim-e1-p2.png used on input line 98.
+(pdftex.def)             Requested size: 278.23827pt x 54.6625pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
-! Package pdftex.def Error: File `pm-f-2.png' not found.
+ []
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99 ...egraphics[width=0.8\textwidth]{pm-f-2.png}
-                                                  
-? 
+[2 <./problim-e1-p2.png>] <problim-e1-p3.png, id=23, 620.3175pt x 67.25125pt>
+File: problim-e1-p3.png Graphic file (type png)
 
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 120.
+<use problim-e1-p3.png>
+Package pdftex.def Info: problim-e1-p3.png used on input line 111.
+(pdftex.def)             Requested size: 278.23827pt x 30.16426pt.
 
-[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
-LaTeX Warning: File `pm-f-3.png' not found on input line 187.
+ []
 
+[3 <./problim-e1-p3.png>] <problim-e1-p4.png, id=30, 626.34pt x 134.5025pt>
+File: problim-e1-p4.png Graphic file (type png)
 
-! Package pdftex.def Error: File `pm-f-3.png' not found.
+<use problim-e1-p4.png>
+Package pdftex.def Info: problim-e1-p4.png used on input line 124.
+(pdftex.def)             Requested size: 278.23827pt x 59.75182pt.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.187 ...graphics[width=0.8\textwidth]{pm-f-3.png}
-                                                  
-? 
-[4]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
-LaTeX Warning: File `pm-f-4.png' not found on input line 199.
+ []
 
-
-! Package pdftex.def Error: File `pm-f-4.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.199 ...graphics[width=0.8\textwidth]{pm-f-4.png}
-                                                  
-? 
-[5]
-
-LaTeX Warning: File `pm-f-5.png' not found on input line 209.
-
-
-! Package pdftex.def Error: File `pm-f-5.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...graphics[width=0.8\textwidth]{pm-f-5.png}
-                                                  
-? 
-[6]
-
-LaTeX Warning: File `pm-f-6.png' not found on input line 220.
-
-
-! Package pdftex.def Error: File `pm-f-6.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 ...graphics[width=0.8\textwidth]{pm-f-6.png}
-                                                  
-? 
-[7]
-
-LaTeX Warning: File `pm-f-7.png' not found on input line 231.
-
-
-! Package pdftex.def Error: File `pm-f-7.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 ...graphics[width=0.8\textwidth]{pm-f-7.png}
-                                                  
-? 
-[8]
-
-LaTeX Warning: File `pm-f-8.png' not found on input line 250.
-
-
-! Package pdftex.def Error: File `pm-f-8.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 ...graphics[width=0.8\textwidth]{pm-f-8.png}
-                                                  
-? 
-[9] [10]
-
-LaTeX Warning: File `pm-f-9.png' not found on input line 312.
-
-
-! Package pdftex.def Error: File `pm-f-9.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.312 ...graphics[width=0.8\textwidth]{pm-f-9.png}
-                                                  
-? 
-[11]
-
-LaTeX Warning: File `pm-f-10.png' not found on input line 340.
-
-
-! Package pdftex.def Error: File `pm-f-10.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.340 ...raphics[width=0.8\textwidth]{pm-f-10.png}
-                                                  
-? 
-[12]
-
-LaTeX Warning: File `pm-f-11.png' not found on input line 372.
-
-
-! Package pdftex.def Error: File `pm-f-11.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.372 ...raphics[width=0.8\textwidth]{pm-f-11.png}
-                                                  
-? 
-[13]
-
-LaTeX Warning: File `pm-f-12.png' not found on input line 413.
-
-
-! Package pdftex.def Error: File `pm-f-12.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.413 ...raphics[width=0.8\textwidth]{pm-f-12.png}
-                                                  
-? 
-[14]
-
-LaTeX Warning: File `pm-f-13.png' not found on input line 440.
-
-
-! Package pdftex.def Error: File `pm-f-13.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.440 ...raphics[width=0.8\textwidth]{pm-f-13.png}
-                                                  
-? 
-[15]
-
-LaTeX Warning: File `pm-f-14.png' not found on input line 451.
-
-
-! Package pdftex.def Error: File `pm-f-14.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.451 ...raphics[width=0.8\textwidth]{pm-f-14.png}
-                                                  
-? 
-[16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 460.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 460.
+[4 <./problim-e1-p4.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
  (./final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 460.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 460.
-
-
-Package rerunfilecheck Warning: File `final.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `final.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 460.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package rerunfilecheck Info: File `final.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 10249 strings out of 493089
- 152521 string characters out of 6134842
- 249940 words of memory out of 5000000
- 13551 multiletter control sequences out of 15000+600000
- 14896 words of font info for 37 fonts, out of 8000000 for 9000
+ 10237 strings out of 493089
+ 152638 string characters out of 6134842
+ 246022 words of memory out of 5000000
+ 13565 multiletter control sequences out of 15000+600000
+ 13882 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,251b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,251b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb>
-Output written on final.pdf (16 pages, 148128 bytes).
+exlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on final.pdf (4 pages, 172324 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
