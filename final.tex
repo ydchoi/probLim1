@@ -1,0 +1,461 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips14submit_e,times}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\def\eQb#1\eQe{\begin{eqnarray*}#1\end{eqnarray*}}
+\def\eQnb#1\eQne{\begin{eqnarray}#1\end{eqnarray}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\pb}[0]{\pagebreak}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\def\Qb#1\Qe{\begin{question}#1\end{question}}
+\def\Sb#1\Se{\begin{solution}#1\end{solution}}
+
+\newenvironment{claim}[1]{\par\noindent\underline{Claim:}\space#1}{}
+\newtheoremstyle{quest}{\topsep}{\topsep}{}{}{\bfseries}{}{ }{\thmname{#1}\thmnote{ #3}.}
+\theoremstyle{quest}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{question}{Question}
+\newtheorem*{preposition}{Preposition}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{challengeproblem}{Challenge Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+\usepackage{verbatimbox}
+\usepackage{listings}
+\title{Random Graphs: \\
+Final Exam}
+
+
+\author{
+Youngduck Choi \\
+CIMS \\
+New York University\\
+\texttt{yc1104@nyu.edu} \\
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\nipsfinalcopy % Uncomment for camera-ready version
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+Every human activity, good or bad, except mathematics, must come to an end. \\
+- Paul Erdos
+\end{abstract}
+
+\bigskip
+
+\begin{question}[1]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{pm-f-1.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+
+\end{solution}
+
+\newpage
+
+\begin{question}[2]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-2.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\textbf{(a)}
+Let $\{X_i\}_{i \in I}$ 
+be the collection of all subsets of $\Omega$,
+with size $3$, such that the sum of the subset is 
+precisely $n$, indexed by $I$. Let $B_i$
+be the event $X_i \subseteq R$. In particular, 
+$A = \bigwedge_{i \in I} \overline{B_i}$.
+We note that
+\eQb
+\epsilon &=& P(B_i) = p^3
+=  (cn^{-\frac{2}{3}})^3
+= c^3 n^{-2} = o(1),
+\eQe 
+and
+\eQb
+\mu &=& E[X] = \sum_{i \in I} P(B_i) = 
+{n-1 \choose 2} c^3 n^{-2} \sim c^3,
+\eQe
+as a simple
+case counting with $x = i$ for $i = 1,..,n-1$,
+shows that there are $
+{ n-1  \choose 2}$ solutions to 
+$x + y + z = n$, such that $x,y,z \in \Omega$,
+and $x,y,z$ are distinct.  
+To apply Janson, it remains to show that 
+$\triangle = o(1)$. From the given combinatorial structure, we have the following equivalence:
+\eQb
+i \sim j &\iff& i \neq j \> \text{ and }
+\> X_i \cap X_j \neq \emptyset \\
+&\iff& 
+|X_i \cap X_j | = 1, \\ 
+\eQe
+as $|X_i \cap X_j | = 2$ implies that the triple
+is identical. Now, fix a solution $(x^*,y^*,z^*)$.
+The number of solutions that share exactly one coordinate is clearly bounded above by $3n$. 
+Therefore, the number of ordered pair $(i,j)$, with $|X_i \cap X_j| = 1$ is $O(n^3)$, as there are
+$\Theta(n^2)$ of them in total.  
+Therefore, it follows that
+\eQb
+\triangle &=& \sum_{i \sim j } P(B_i \wedge B_j) = \sum_{|X_i \cap X_j| = 1}
+P(B_i \wedge B_j) \\
+&=& O(n^3p^5) = O(n^{3} c^5 n^{-\frac{10}{3}}) = O(c^5 n^{-\frac{1}{3}}) = o(1).  
+\eQe  
+As $\epsilon = o(1)$ and $\triangle = o(1)$, Janson gives
+\eQb
+P(A) \to e^{-c^3},
+\eQe
+as required.
+
+\bigskip
+
+\textbf{(b)} Choose $p = n^{-\frac{2}{3}}\ln(n)^{\frac{1}{3}}$
+ with foresight. Substituting the new parametrization to the above
+calculation gives 
+\eQb
+\epsilon &=& P(B_i) = p^3
+=  (n^{-\frac{2}{3}}\ln(n)^{\frac{1}{3}})^3
+= n^{-2}\ln(n) = o(1),
+\eQe
+and 
+\eQb
+\mu &=& E[X] = \sum_{i \in I} P(B_i) = 
+{n-1 \choose 2} n^{-2}\ln(n) \sim \ln(n),
+\eQe
+with
+\eQb
+\triangle &=& O(n^{-\frac{1}{3}} \ln(n)) =  o(1).
+\eQe
+Hence, Janson gives 
+\eQb
+P(A) = n^{-1+o(1)},
+\eQe
+as required.
+
+\hfill $\qed$
+
+\end{solution}
+
+\newpage
+
+\begin{question}[3]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-3.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\hfill $\qed$
+\end{solution}
+\newpage
+
+\begin{question}[4]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-4.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\end{solution}
+\newpage
+\begin{question}[5]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-5.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[6]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-6.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[7]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-7.png}
+\end{figure}
+\end{question}
+\begin{solution}
+Let $\{A_i\}_{i\in I}$ be the collection of 4-cycles of $G$, and let $\{ X_i\}_{i \in I}$
+be the corresponding indicator random variables. In particular, $X = \sum_{i \in I} X_i$. Now, 
+by linearity of expectation, it follows that
+\eQb
+E[X] &=& \sum_{i \in I} P(A_i) \sim n^2p^4.
+\eQe
+Therefore, with $p = \dfrac{1}{\sqrt{n}}$, it follows that 
+
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[8]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-8.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\textbf{(a)} Let $X_i$ be the indicator of triangles, so $X = \sum_{i \in I} X_i$. By linearity of expectation,
+we obtain
+\eQb
+E[X] &=& E[\sum_{i \in I} X_i] = \sum_{i \in I} E[X_i] 
+= { n \choose 3 }p^3 = { n \choose 3 } \left(\dfrac{c}{n} \right)^3,
+\eQe
+and asymptotically 
+\eQb
+E[X] \sim \dfrac{c^3}{6},
+\eQe
+as required.
+
+\smallskip
+
+\textbf{(b)} 
+From the definition of variance, it follows that
+\eQb
+Var[X] &=& \sum_{S} Var[X_S] + \sum_{S \neq T} Cov[X_S, X_T].
+\eQe
+In particular, the variance formula for 
+discrete random variable yields 
+\eQb
+\sum_{S} Var[X_S] &=& {n \choose 3} p^3(1-p^3). 
+\eQe
+Since $p = o(1)$, we have that $(1-p^3) = o(1)$. 
+Combining the result gives
+\eQb
+Var[X_S] &=& p^3 (1-p^3) \sim p^3 \> \text{ and } \> Var[X_S] \sim E[X_S] \sim \dfrac{1}{6}c^3. 
+\eQe 
+Now, observe that covariance is $0$ for $S,T$ pair, where $|S \cap T| \neq 2$. Now, for $S,T$ pair,
+where $|S \cap T| = 2$, we have, by definition of covariance, 
+\eQb
+Cov(X_S, X_T) &=& E[X_S X_T] - E[X_S]E[X_T] = p^5 - p^6.
+\eQe
+Since there are ${n \choose 3} 3 (n-3)$ choices (fix the first triangle, pick the one that will not
+be shared, and choose the remaining one from the rest of the graph), we finally have
+\eQb
+\sum_{S \neq T} Cov(X_S, X_T) &=& {n \choose 3} 3 (n-3) (p^5 - p^6) = o(1).
+\eQe
+Therefore, we can conclude that $Var[X] \sim \dfrac{c^3}{6}$ as well. 
+ 
+\smallskip
+
+\textbf{(c)} Using Janson's inequality (to be precise
+a corolloary of it (pg.129),
+we have that as $n \to \infty$
+\eQb
+P[X=0] \to e^{\frac{c^3}{6}},
+\eQe
+as required.
+
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[9]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-9.png}
+\end{figure}
+\end{question}
+\begin{solution}
+For notational convenience, we replace $X_k$ with $X$.
+Let $\{X_i\}_{i \in I}$ be the set of 
+indicators defined on each k-clique of a complete
+graph with $n$ vertices, indexed by $I$. In
+particular, we have $\sum_{i \in I} X_i = X$.
+By 
+linearity of expectation, it follows that
+\eQb
+E[X] &=& E[\sum_{i \in I} X_i] = \sum_{i \in I}
+E[X_i] = {n \choose k}\left( \dfrac{1}{3} \right)^{
+{k \choose 2}}.
+\eQe
+Since $k$ is fixed, as $n \to \infty$, we have
+\eQb
+E[X] &\sim& \dfrac{n^k}{k!}(\dfrac{1}{3})^{
+{k \choose 2}}
+\eQe 
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[10]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-10.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\textbf{(a)}
+We denote the event that $X_i$ indicates as $A_i$.
+With the given setup, by linearity of expectation, we obtain
+\eQb
+E[X] &=& \sum_{0 \leq i < m } E[X_i] = \sum_{0 \leq i < m} P(A_i) \\
+&=& \sum_{0 \leq i < m} 2^{-1-n} = 2^{-1}. 
+\eQe
+
+\bigskip
+
+\textbf{(b)}
+
+\bigskip
+
+\textbf{(c)}
+
+\bigskip
+
+\textbf{(d)} By Brun's Sieve (theorem 8.3.1 from PM), it follows that
+
+
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[11]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-11.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\textbf{(a)} For simplicity, consider the complete 
+graph case in $G(n,p)$, where we have 
+pre-exposed a square in the gradation without 
+its diagonals being exposed just yet. Now, 
+exposing a diagonal edge will increase the number
+of the triangles at least by $2$, so the 
+Lipschitz condition is not satisfied. 
+
+\bigskip
+
+\textbf{(b)}
+Let $Y$ be the max size family of edge disjoint triangles. Trivially, $X = 0 \iff Y=0$. Suppose that 
+an edge exposure introduced $k$ new triangles to the current state of the graph. Consider
+the collection of families 
+of all edge disjoint triangles at the given exposure.
+Each family can only increase by one, as they can pick
+at most $1$ triangle out of the $k$ new triangles. Therefore, each family of edge disjoint triangles
+increase at most by $1$ and the maximum number thus increase at most by $1$. We have shown that this
+graph theoretic property is Lipschitz under the edge exposure gradation. 
+ 
+\bigskip
+
+\textbf{(c)} From the proof of theorem $7.3.2$ from PM, which is a direct consequence of the current setup 
+and the Azuma's inequality, we obtain
+\eQb
+P[X=0] &=& P[Y=0] \leq P[Y - E[Y] \leq -E[Y]] \\
+&\leq& e^{-\frac{E[Y]^2}{2{n\choose 2}}} \leq e^{-\Theta(\frac{n^2}{k^8})} = e^{-\Theta{(n^2)}},
+\eQe
+as required.
+
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[12]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-12.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\textbf{(a)}
+
+\bigskip
+
+\textbf{(b)}
+From LLL, we can show that
+\eQb
+R(k,k) > \dfrac{\sqrt{2}}{e}k2^{\frac{k}{2}}(1+o(1)),
+\eQe
+which is a factor of $2$ improvement from the
+union bound argument. 
+
+\bigskip
+
+\textbf{(c)}
+
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[13]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-13.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\hfill $\qed$
+\end{solution}
+\newpage
+\begin{question}[14]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{pm-f-14.png}
+\end{figure}
+\end{question}
+\begin{solution}
+\hfill $\qed$
+\end{solution}
+\newpage
+
+
+\end{document}
+
