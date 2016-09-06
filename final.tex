@@ -42,6 +42,7 @@
 \newtheorem*{remark}{Remark}
 \usepackage{verbatimbox}
 \usepackage{listings}
+\usepackage{mathrsfs}
 \title{ProbLimI: \\
 Pset I}
 
@@ -99,8 +100,52 @@ This work contains solutions to the exercises of the problem set I.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-Firstly, as $\emptyset$ and $\Omega$ are in $\mathscr{G}_{\alpha}$, it follows that
-$\emptyset, \Omega \in \mathscr{G}_{\alpha}$
+\textbf{(i)}
+As $\emptyset$ and $\Omega$ are in $\mathscr{G}_{\alpha}$ for all $\alpha$,
+by the $\sigma -$field property of each $\mathscr{G}_{\alpha}$, 
+it follows that $\emptyset, \Omega \in \bigcap_{\alpha}
+\mathscr{G}_{\alpha}$. Now, it suffices to show
+that
+\eQb
+A \in \bigcap_{\alpha} \mathscr{G}_{\alpha} &\implies& 
+A^c \in \mathscr{G}_{\alpha}, 
+\\
+\{ A_n\} \subset \bigcap_{\alpha} \mathscr{G}_{\alpha}  &\implies& 
+\bigcap_n A_n \in \bigcap_{\alpha} \mathscr{G}_{\alpha}.
+\eQe
+If $A \in \bigcap_{\alpha} \mathscr{G}_{\alpha}$ then, $A \in \mathscr{G}_{\alpha}$
+for all $\alpha$, and by the $\sigma -$field assumption on each $\mathscr{G}_{\alpha}$,
+it follows that $A^c \in \mathscr{G}_{\alpha}$ for all $\alpha$, so $A^c \in
+\bigcap_{\alpha} \mathscr{G}_{\alpha}$. \\ 
+
+\smallskip
+
+If $\{A_n \} \subset \bigcap_{\alpha} \mathscr{G}_{\alpha}$, then $\{ A_n \} \subset
+\mathscr{G}_{\alpha}$ for all $\alpha$, and by the $\sigma -$ field assumption on
+each $\mathscr{G}_{\alpha}$, it follows that $\bigcap_n A_n \in \mathscr{G}_{\alpha}$
+for all $\alpha$, so $\bigcap_n A_n \in \bigcap_{\alpha} \mathscr{G}_{\alpha}$. 
+
+\smallskip
+
+Now, recall that $\sigma(\mathscr{F})$ is defined to be the smallest $\sigma$-field
+containing $\mathscr{F}$. Consider the family of $\sigma$-field that contains 
+$\mathscr{F}$, and denote it by $\{ \mathscr{G}_\alpha \}$.  
+The above result shows that $\bigcap_{\alpha} 
+\mathscr{G}_{\alpha}$ is a $\sigma$-field, and it is trivial that it contains
+$\mathscr{F}$. Obviously, for any $\alpha$, $
+\bigcap_{\alpha} \mathscr{G}_\alpha \subset \mathscr{G}_{\alpha}$, 
+which tells us that any $\sigma$-algebra
+containing $\mathscr{F}$ contains $\mathscr{G}_{\alpha}$, so it follows that
+$\bigcap_{\alpha} \mathscr{G}_{\alpha}$ is the smallest $\sigma$-algebra containing
+$\mathscr{F}$ and notationally we have 
+\eQb
+\sigma(\mathscr{F}) &=& \{ \mathscr{F} \subset \mathscr{G} : \mathscr{G} \> 
+\text{ is a } \sigma-\text{field} \},
+\eQe 
+as required. \hfill $\qed$ 
+
+\textbf{(ii)}   
+
 \end{solution}
 
 \newpage
