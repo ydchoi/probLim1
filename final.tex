@@ -87,15 +87,80 @@ This work contains solutions to the exercises of the problem set I.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-
-\textbf{(ii)} Define $A_0 = \emptyset$ and 
+\textbf{(i)} Note that we have finite additivity property of measure, 
+as the emptyset belong to any $\sigma$-field by definition.
+We first have 
 \eQb
-\tilde{A}_k &=& A_k \setminus A_{k-1} \> \> (k \in \mathbb{N}). 
-\eQe  
-Then, by countable additivity, we have
-\eQb
-\mathbb{P}(\bigcup_{k} 
+A,B \in \mathscr{F}, A \subset B \implies \mathbb{P}(A) \leq \mathbb{P}(B) 
+\>\>\> (*),
 \eQe
+because
+\eQb
+\mathbb{P}(B) &=& \mathbb{P}((B \setminus A) \cup A) = \mathbb{P}(B \setminus A)
++ \mathbb{P}(A).
+\eQe
+Now, define $A_0 = \emptyset$, and 
+\eQb
+\tilde{A}_k &=& A_k \setminus (\bigcup_{0 \leq n < k} A_n) \>\>\> (k \geq 1).
+\eQe
+It follows that $\{ \tilde{A}_k \}$ is a pairwise disjoint collection such that
+\eQb
+\bigcup_k \tilde{A}_k = \bigcup_k A_k \>\>\> \text{and}  \>\>\>
+\tilde{A}_k \subset A_k \>\>\> (k \geq 1).
+\eQe
+The union equality holds, since
+if $x \in \bigcup_k A_k$, then $x \in A_{k'}$
+for some $k'$, and  $x \in \tilde{A}_{k^*}$ , where 
+\eQb
+k^* = \inf\{k ; x \in A_k \}, 
+\eQe
+as $x \notin A_k$ for $k < k^*$ and $x \in A_{k^*}$. 
+Hence, by countable additivity, 
+\eQb
+\mathbb{P}(\bigcup_k A_k) = \mathbb{P}(\bigcup_k \tilde{A}_k ) 
+= \sum_k \mathbb{P}(\tilde{A}_k) \leq \sum_k \mathbb{P}(A_k),
+\eQe
+where the last inequality follows from $(*)$. \hfill $\qed$
+
+\newpage
+
+\textbf{(ii)} Define $A_0, \tilde{A}_0 = \emptyset$ and 
+\eQb
+\tilde{A}_k &=& A_k \setminus A_{k-1} \>\>\>\> (k \geq 1). 
+\eQe  
+By finite additivity and the fact that 
+$\{A_k\}$ is increasing, we have, for any $k \geq 1$,
+\eQb
+\mathbb{P}(A_k) &=& \mathbb{P}(A_{k-1} \cup (A_{k} \setminus A_{k-1})) 
+= \mathbb{P}(A_{k-1}) + \mathbb{P}( A_k \setminus A_{k-1}), \\ 
+\eQe
+and by re-arranging 
+\eQb
+\mathbb{P}(\tilde{A}_k) &=& \mathbb{P}(A_k) - \mathbb{P}(A_{k-1}). \\ 
+\eQe
+Now, $\{ \tilde{A}_k \}$ are disjoint, so by countable additivity, we have
+\eQb
+\mathbb{P}(A) = 
+\mathbb{P}(\bigcup_{k} A_k) &=& \mathbb{P}(\bigcup_{k} \tilde{A}_k) 
+= \sum_{k} \mathbb{P}(\tilde{A}_k) = \lim_{k \to \infty} \sum_{n = 1}^{k} 
+\mathbb{P}(A_n) - \mathbb{P}(A_{n-1}) \\
+&=& \lim_{k \to \infty} \mathbb{P}(A_k) - \mathbb{P}(A_0) = \lim_{k \to \infty}
+\mathbb{P}(A_k),
+\eQe
+as required. Now, we show the continuity from above. Note that $\{A_k^c\}$
+forms an increasing collection.
+By the DeMorgan's law, and continuity from below,
+\eQb
+1 - \mathbb{P}(\bigcap_k A_k) &=& \mathbb{P}((\bigcap_k A_k)^c) 
+= \mathbb{P}(\bigcup_k A_k^c) = \lim_{k\to \infty} \mathbb{P}(A_k^c) 
+= 1 - \lim_{k \to \infty} \mathbb{P}(A_k), 
+\eQe 
+so 
+\eQb
+\mathbb{P}(A) &=& \mathbb{P}(\bigcap_k A_k) =  \lim_{k \to \infty} \mathbb{P}(A_k), 
+\eQe
+as required. \hfill $\qed$
+
 
 \end{solution}
 
@@ -110,6 +175,7 @@ Then, by countable additivity, we have
 \end{question}
 \begin{solution} \hfill \\
 \textbf{(i)}
+We just note that the index set must be non-empty.
 As $\emptyset$ and $\Omega$ are in $\mathscr{G}_{\alpha}$ for all $\alpha$,
 by the $\sigma -$field property of each $\mathscr{G}_{\alpha}$, 
 it follows that $\emptyset, \Omega \in \bigcap_{\alpha}
@@ -136,6 +202,12 @@ for all $\alpha$, so $\bigcap_n A_n \in \bigcap_{\alpha} \mathscr{G}_{\alpha}$.
 
 \smallskip
 
+First, note that $\{\mathscr{F} \subset \mathscr{G} \>\> | \>\>
+\mathscr{G} \>\> \text{is a } \> \sigma \text{-field} \}$ 
+is non-empty, as $2^{\Omega}$ 
+belongs to it. So by the above result $
+\mathscr{G} = \bigcap \{ \mathscr{F} \subset \mathscr{G} \>\> | \>\> 
+\mathscr{G} \>\> \text{is a } \> \sigma \text{-field} \}$ is a $\sigma$-field.
 Now, recall that $\sigma(\mathscr{F})$ is defined to be the smallest $\sigma$-field
 containing $\mathscr{F}$. Consider the family of $\sigma$-field that contains 
 $\mathscr{F}$, and denote it by $\{ \mathscr{G}_\alpha \}$.  
@@ -154,7 +226,17 @@ $\mathscr{F}$ and notationally we have
 \eQe 
 as required. \hfill $\qed$ 
 
-\textbf{(ii)}   
+\bigskip
+
+\textbf{(ii)} Let $\{A_k\} \subset \mathscr{F}$, and define
+\eQb
+\tilde{A}_k &=& \bigcup_{n \leq k} A_n \>\>\> (k \geq 1). 
+\eQe 
+Then, $\{\tilde{A}_k\}$ is an increasing sequence, so by a monotone class property,
+\eQb
+\bigcup_k A_k) &=& \bigcup_k \tilde{A}_k \in \mathscr{M}.
+\eQe
+Similarly, 
 
 \end{solution}
 
@@ -181,7 +263,7 @@ as required. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-\textbf{(a)} Let $f$ be a simple function, e.g. 
+\textbf{(a)} Let $f$ be a simple function, i.e. 
 \eQb
 f &=& \sum_{i=1}^{n} a_i X_{E_i},
 \eQe
@@ -191,7 +273,7 @@ For sake of completeness, we show that $f$ is $(\mathscr{F},\mathscr{B}_{\mathbb
 measurable. For any $a \in \mathbb{R}$, observe that $f^{-1}((-\infty,a])$ 
 is a union of sub-collection (allowing the empty collection) of $\{ E_i \}$, so
 it is in $\mathscr{F}$. Hence, any simple function is $(\mathscr{F},
-\mathscr{B}_{\mathbb{R}})$ measurable.  
+\mathscr{B}_{\mathbb{R}})$ measurable.
 
 \bigskip
 
@@ -199,16 +281,17 @@ Fix $a \in \mathbb{R}$.
 As $f^{-1}(-\infty) = \emptyset$ and 
 $f$ is $(\mathscr{F},\mathscr{B}_{\mathbb{R}})$ measurable, it follows that 
 \eQb
-f^{-1}([-\infty,a]) &=& f^{-1}((-\infty,a]) \in \mathscr{F}.
+f^{-1}([-\infty,a]) &=& f^{-1}(-\infty) \cup f^{-1}((-\infty,a]) \in \mathscr{F}.
 \eQe
-So, $f$ is $(\mathscr{F}, \mathscr{B}_{\mathbb{[-\infty,\infty]}})$ measurable.
+So, $f$ is $(\mathscr{F}, \mathscr{B}_{\mathbb{[-\infty,\infty]}})$ measurable,
+i.e. $f \in m\mathscr{F}$.
 
 \bigskip
 
 \textbf{(b)} Observe that 
 \eQb
-\liminf_{n \to \infty} X_n &=& \inf_k \sup_{n \geq k} X_n\\
-\limsup_{n \to \infty} X_n &=& \sup_k \inf_{n \geq k} X_n\\.
+\liminf_{n \to \infty} X_n &=& \sup_k \inf_{n \geq k} X_n\\
+\limsup_{n \to \infty} X_n &=& \inf_k \sup_{n \geq k} X_n\\.
 \eQe
 Hence, with symmetry of $\inf$ and $\sup$, it suffices to show that
 $\sup_n X_n$ is measurable.
@@ -217,8 +300,13 @@ $\sup_n X_n$ is measurable.
 Fix $a \in \mathbb{R}$. Then, we have
 \eQb
 (\sup_n X_n)^{-1}([-\infty,a]) &=& \bigcap_n X_n^{-1} ([-\infty,a]) \in \mathscr{F}.
+\>\> (*)
 \eQe 
-So, $\sup X_n$ is measurable. 
+We now prove $(*)$. If $w \in \bigcap_n X_n^{-1}([-\infty,a])$, then 
+$X_n(w) \in [-\infty,a]$ for all $n$, so $\sup_n X_n(w) \in [-\infty,a]$,
+and $w \in \sup_n^{-1}([-\infty,a])$. If $w \in \sup_n X_n^{-1}([-\infty,a])$,
+then $\sup_n X_n(w) \in [-\infty,a]$, which implies $X_n(w) \in [-\infty,a]$ 
+for all $n$. Hence, $(*)$ is true and $\sup X_n \in m\mathscr{F}$. 
 
 \bigskip
 
