@@ -44,7 +44,7 @@
 \usepackage{listings}
 \usepackage{mathrsfs}
 \title{ProbLimI: \\
-Pset I}
+Problem Sset I}
 
 
 \author{
@@ -74,7 +74,8 @@ New York University\\
 \maketitle
 
 \begin{abstract}
-This work contains solutions to the exercises of the problem set I.
+This work contains solutions to the exercises of the problem set I. The
+chosen problems are 1,2, and 4.
 \end{abstract}
 
 \bigskip
@@ -350,14 +351,35 @@ as the monotone class lemma. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-We first note that, as closed sets belong to 
-the Borel $\sigma$-field, to show that $f$ is a Borel function, it suffices 
-to show that 
-
+We first establish an important observation follows: 
+Let $X,Y$ be topological spaces,
+and $\mathscr{B}_X$, $\mathscr{B}_Y$ are respective Borel $\sigma$-fields. Then,
+for any $f: X \to Y$, 
+\eQb
+f \text{ is continuous } &\implies& f \text{ is } (B_X,B_Y) \text{ measurable}.
+\eQe
+This holds, because open sets are generators of any Borel $\sigma$-field, and
+by continuity, we obtain that the generators of the image are mapped to
+the $\sigma$-field on the domain. This problem gives a stronger result of this nature
+in this concrete setting, where the domain is $\mathbb{R}^n$ and the image is $[-\infty,
+\infty]$, because it shows that the lower semi-continuity is sufficient for 
+measurability. In summary, the conclusion holds, as continuity implies
+lower continuity, which by the stated result implies measurability.
+ 
 \bigskip
-Now, as 
-Now, as inverse images of closed sets are closed for continuous functions, 
-from the above result, it follows that  
+Now, we proceed with the proof. It suffices to show that 
+\eQb
+A = \{ x \in \mathbb{R}^n : \> f(x) \leq \alpha \},
+\eQe
+is closed for any $a \in \mathbb{R}$, because closed sets 
+belong to the Borel $\sigma$-field, and $\{[-\infty,a]\}_{a}$ form a generator 
+of the image $\sigma$-field. We claim that $A$ is closed. Suppose that
+$x \in \mathbb{R}^n$ such that there exists $x_n$ from $A$ that $x_n \to x$.
+As $||x_n - x|| \to 0$, by the lower-semicontinuity, we obtain
+\eQb
+f(x) \leq \liminf f(x_n) \leq a ,
+\eQe 
+so $x \in A$. Hence, $A$ is closed and we are done. \hfill $\qed$
 \end{solution}
 
 \newpage 
