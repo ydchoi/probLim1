@@ -209,6 +209,36 @@ $\mathbb{Q}$ is a probability measure, if $X \geq 0$ and we are done
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+We compute
+\eQb
+\Var[Y] &=& \mathbb{E}[Y^2] - \mathbb{E}[Y]^2 \\
+&=& \mathbb{E}[(\sum_{k=1}^{l} \mathbbm{1}_{A_k})^2] - \mathbb{E}[
+\sum_{k=1}^{l} \mathbbm{1}_{A_k}]^2 \\
+&=& \sum_{k=1}^{n} \sum_{l=1}^{n} \mathbb{E}[\mathbbm{1}_{A_k}\mathbbm{1}_{A_l}]
+- \sum_{k=1}^{n} \sum_{l=1}^{n} \mathbb{E}[\mathbbm{1}_{A_k}] \mathbb{E}[
+\mathbbm{1}_{A_l}] \\
+&=& \sum_{k=1}^{n} \sum_{l=1}^{n} 
+\mathbb{E}[\mathbbm{1}_{A_k \cap A_l}] - \mathbb{E}[\mathbbm{1}_{A_k}]
+\mathbb{E}[\mathbbm{1}_{A_l}] \\
+&=& \sum_{k=1}^{n} \sum_{l=1}^{n} \mathbb{P}(A_k \cap A_l) - \mathbb{P}(A_k)
+\mathbb{P}(A_l).
+\eQe
+Now, observe that, for $k = 1,...,n$, 
+\eQb
+\mathbb{P}(A_k) &=& (\dfrac{n-1}{n})^m 
+\eQe
+and for $k,l = 1,...,n$,
+\eQb
+k = l &\implies& \mathbb{P}(A_k \cap A_l)  = (\dfrac{n-1}{n})^{m} \\
+k \neq l &\implies& \mathbb{P}(A_k \cap A_l) = (\dfrac{n-2}{n})^{m}. \\ 
+\eQe
+So
+\eQb
+\Var[Y] &=& 
+\sum_{1\leq k,l \leq n; k \neq l} (\dfrac{n-2}{n})^{m} - (\dfrac{n-1}{n})^{2m}, \\
+\eQe
+as required.
+
 \end{solution}
 
 \end{document}
