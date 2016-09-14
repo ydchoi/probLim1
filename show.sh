@@ -1,1 +1,1 @@
-pdflatex final.tex && open final.pdf
+pdflatex pset2.tex && open pset2.pdf
