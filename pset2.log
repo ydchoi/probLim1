@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 SEP 2016 10:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 SEP 2016 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -737,20 +737,20 @@ im-e2-p1.png>] [2] <problim-e2-p2.png, id=34, 621.32124pt x 138.5175pt>
 File: problim-e2-p2.png Graphic file (type png)
 
 <use problim-e2-p2.png>
-Package pdftex.def Info: problim-e2-p2.png used on input line 177.
+Package pdftex.def Info: problim-e2-p2.png used on input line 178.
 (pdftex.def)             Requested size: 278.23827pt x 62.03004pt.
  [3 <./problim-e2-p2.png>]
 <problim-e2-p3.png, id=43, 623.32875pt x 107.40125pt>
 File: problim-e2-p3.png Graphic file (type png)
  <use problim-e2-p3.png>
-Package pdftex.def Info: problim-e2-p3.png used on input line 254.
+Package pdftex.def Info: problim-e2-p3.png used on input line 255.
 (pdftex.def)             Requested size: 278.23827pt x 47.9417pt.
-LaTeX Font Info:    Try loading font information for U+bbm on input line 261.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 262.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Underfull \hbox (badness 1472) in paragraph at lines 314--322
+Underfull \hbox (badness 1472) in paragraph at lines 315--323
 \OT1/ptm/m/n/10 Combining (*) with the above limit, we see that $[][] \U/msb/m/
 n/10 E\OMX/MnSymbolE/m/n/10 ^^@\OML/cmm/m/it/10 X\U/bbm/m/n/10 1[]\OMX/MnSymbol
 E/m/n/10 ^^E$ \OT1/ptm/m/n/10 con-verges ab-so-lutely and
@@ -760,18 +760,18 @@ E/m/n/10 ^^E$ \OT1/ptm/m/n/10 con-verges ab-so-lutely and
 <problim-e2-p4.png, id=56, 630.355pt x 101.37875pt>
 File: problim-e2-p4.png Graphic file (type png)
  <use problim-e2-p4.png>
-Package pdftex.def Info: problim-e2-p4.png used on input line 348.
+Package pdftex.def Info: problim-e2-p4.png used on input line 349.
 (pdftex.def)             Requested size: 278.23827pt x 44.7491pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 386.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
 
 [6 <./problim-e2-p4.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 386.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
  (./pset2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 386.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 386.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
 Package rerunfilecheck Info: File `pset2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 386.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
  ) 
 Here is how much of TeX's memory you used:
  11942 strings out of 493089
@@ -801,7 +801,7 @@ s/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb>
-Output written on pset2.pdf (6 pages, 296276 bytes).
+Output written on pset2.pdf (6 pages, 296297 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream

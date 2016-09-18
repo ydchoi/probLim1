@@ -152,19 +152,20 @@ Therefore, the induction is complete and the inequality is true.
 Now, if $X = \sum_{k=1}^{n} 1_{A_k}$, then
 \eQb
 m_1 &=& E[X] = \sum_{k=1}^{n} \mathbb{P}(A_k) \\
-m_2 &=& E[X^2] = \mathbb{E}[\sum_{1\leq k<l\leq n}1_{A_k}] = \sum_{1 \leq k < l \leq n}
-\mathbb{P}(A_k \cap A_l) 
+m_2 &=& E[X^2] = \mathbb{E}[\sum_{1\leq k \leq l\leq n}1_{A_k}] 
+= \sum_{1 \leq k \leq l \leq n}
+\mathbb{P}(A_k \cap A_l)
 \eQe
 and
 \eQb
 \mathbb{P}(X > \alpha) &=& \mathbb{P}(\bigcup_{k=1}^{n} A_k),
 \eQe
-for any $\alpha \in (0,1)$. Hence, to compare, if $X = \sum_{k=1}^{n} 1_{A_k}$,
+for any $\alpha \in [0,1)$. Hence, to compare, if $X = \sum_{k=1}^{n} 1_{A_k}$,
 we can re-write $(iii)$ as
 \eQb
-P(X > \alpha) &\geq& m_1 - m_2,
+P(X > \alpha) &\geq& 2m_1 - m_2,
 \eQe
-for any $\alpha \in (0,1]$. \hfill $\qed$
+for any $\alpha \in [0,1)$. \hfill $\qed$
 
 \end{solution}
 
