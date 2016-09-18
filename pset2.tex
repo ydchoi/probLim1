@@ -90,6 +90,82 @@ chosen problems are 1,2, and 4.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(1)} Fix $\alpha \in [0,m_1)$. By Cauchy-Schwartz, 
+\eQb
+\mathbb{E}[1_{X > \alpha} X]^2 &\leq& \mathbb{E}[1_{\{X > \alpha\}}^2]
+\mathbb{E}[ X^2] = \mathbb{P}(X > \alpha) m_2.
+\eQe
+On the other hand,
+\eQb
+m_1 &=& \mathbb{E}[X1_{\{ X > \alpha\}}] + E[X1_{\{ X \leq \alpha \}}], 
+\eQe
+which implies
+\eQb
+(m_1 - \alpha)^ 2&\leq& \mathbb{E}[X1_{\{ X > \alpha\}}]^2.
+\eQe
+Combining the above inequality with the first one and re-arranging yield
+\eQb
+\dfrac{(m_1 - \alpha)^2}{m_2} &\leq& \mathbb{P}(X > \alpha),
+\eQe
+as required. \hfill $\qed$
+
+\bigskip
+\textbf{(2)} By Cauchy-Schwartz, 
+\eQb
+\mathbb{E}[|(X+m_2^{\frac{1}{2}})(X-m_2^{\frac{1}{2}})|]  &\leq&
+(\mathbb{E}[X^2 + 2{m_2}^{\frac{1}{2}}X + m_2] 
+\mathbb{E}[X^2 - 2{m_2}^{\frac{1}{2}}X + m_2])^{\frac{1}{2}} \\
+&=& (4{m_2}^2 - 4 m_2 {m_1}^2)^{\frac{1}{2}} = 2m_2^{\frac{1}{2}}
+(m_2 - {m_1}^2)^{\frac{1}{2}}. \\
+\eQe
+Squaring both sides gives the desired inequality. \hfill $\qed$
+
+\bigskip
+
+
+\textbf{(3)} We show the inequality via induction. For $n = 2$, 
+\eQb
+\mathbb{P}(A_1 \cup A_2) &=& \mathbb{P}({A_1}^c \cap A_2) + 
+\mathbb{P}(A_1 \cap {A_2}^c) + \mathbb{P}(A_1 \cap A_2) \\
+&=& \mathbb{P}({A_1}^c \cap A_2) + \mathbb{P}(A_1 \cap A_2)  
++ \mathbb{P}(A_1 \cap {A_2}^c) + \mathbb{P}(A_1 \cap A_2) 
+- \mathbb{P}(A_1 \cap A_2) \\
+&=& \mathbb{P}(A_1) + \mathbb{P}(A_2) - \mathbb{P}(A_1 \cap A_2).
+\eQe
+Now, suppose the statement is true for some $n > 2$. Then,
+using the $n=2$ case, the inductive hypothesis and subadditivity gives
+\eQb
+\mathbb{P}(\bigcup_{k=1}^{n+1} A_k) &=& \mathbb{P}(\bigcup_{k=1}^{n} A_k \bigcup
+A_{n+1}) \\
+&=& \mathbb{P}(\bigcup_{k=1}^{n} A_k) + \mathbb{P}(A_{n+1}) - \mathbb{P}
+(\bigcup_{k=1}^{n} A_k \bigcap A_{n+1}) \\
+&\geq& \sum_{k=1}^{n} \mathbb{P}(A_k) - \sum_{1\leq k<l\leq n} 
+\mathbb{P}(A_k \bigcap A_l) + \mathbb{P}(A_{k+1}) - \mathbb{P}(
+\bigcup_{k=1}^{n} A_n \bigcap A_{n+1}) \\
+&\geq& \sum_{k=1}^{n+1} \mathbb{P}(A_k) - \sum_{1\leq k<l\leq n} 
+\mathbb{P}(A_k \bigcap A_l) - \sum_{k=1}^{n} \mathbb{P}(
+A_k \bigcap A_{n+1}) \\
+&=& \sum_{k=1}^{n+1} \mathbb{P}(A_k) - \sum_{1 \leq k< l \leq n} 
+\mathbb{P}(A_k \bigcap A_l). 
+\eQe
+Therefore, the induction is complete and the inequality is true.
+Now, if $X = \sum_{k=1}^{n} 1_{A_k}$, then
+\eQb
+m_1 &=& E[X] = \sum_{k=1}^{n} \mathbb{P}(A_n) \\
+m_2 &=& E[X^2] = \mathbb{E}[\sum_{1\leq k<l\leq n}1_{A_k}] = \sum_{1 \leq k < l \leq n}
+\mathbb{P}(A_k \cap A_l) 
+\eQe
+and
+\eQb
+\mathbb{P}(X > \alpha) &=& \mathbb{P}(\bigcup_{k=1}^{n} A_k),
+\eQe
+for any $\alpha \in (0,1]$. Hence, to compare, if $X = \sum_{k=1}^{n} 1_{A_k}$,
+we can re-write $(iii)$ as
+\eQb
+P(X > \alpha) &\geq& m_1 - m_2,
+\eQe
+for any $\alpha \in (0,1]$. \hfill $\qed$
+
 \end{solution}
 
 \newpage
@@ -102,6 +178,70 @@ chosen problems are 1,2, and 4.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(a)}
+We first note that, for any $x \in \mathbb{R}$,
+$\exp(-|X - x|)$ is uniformly bounded by $1$, and we have a finite measure,
+so the expectation is well-defined and $f$ is well-defined everywhere.
+Set $\mu = L(X)$. Then, by a change of variable,
+\eQb
+f(x) &=& \mathbb{E}[\exp(-|X-x|) = \int_{-\infty}^{\infty} \exp(-|t-x|)\mu(dt) 
+\eQe
+so, for $x,h \in \mathbb{R}$,
+\eQb
+|f(x+h) - f(x)| &=& |\int e^{-|t - x - h|} - e^{-|t - x|} \mu(dt) | \\  
+&\leq& \int |e^{-|t-x-h|} - e^{-|t-x|}| \mu(dt) \>\>\> (*).
+\eQe
+Observe that
+\eQb
+|e^{-|t-x-h|} - e^{-|t-x|}| \leq 2 
+\eQe
+for any $t,x,h \in \mathbb{R}$
+and
+\eQb
+| e^{-|t-x-h|} - e^{-|t-x|}| \to 0 \>\> \text{as} \>\> h \to 0 
+\eQe
+for any $t,x \in \mathbb{R}$.
+Therefore, by BCT and (*), it follows that
+\eQb
+|f(x+h) - f(x)| \to 0 \>\> \text{as} \>\> h \to 0,
+\eQe
+which shows that $f$ is continuous as required. \hfill $\qed$
+
+\bigskip
+
+\textbf{(b.1)} With L'hopital's rule, we obtain that
+\eQb
+\lim_{p \downarrow 0} \dfrac{X^{p}(w) - 1}{p} &=& \lim_{p \downarrow 0}
+X^p(w) \log(X(w)) = \log(X(w)),
+\eQe
+for all $w \in \Omega$. Hence,
+\eQb
+\{\dfrac{X^p - 1}{p}\}_{p \geq 0} \>\> \text{ converges almost surely to }
+\log(X) \text{ on } \Omega
+\eQe
+
+ By DCT,
+\eQb
+\lim_{p \downarrow 0} \dfrac{(\mathbb{E}X^p -1)}{p} &=& \mathbb{E}\log(X),
+\eQe 
+as required. \hfill $\qed$
+
+\bigskip
+
+\textbf{(b.2)} 
+
+\textbf{(Remark)} Although all limit theorems are stated so far
+for a countable limit, they apply as well to a continuous limit. 
+Suppose $\{X_t\}_{t \geq 0}$ is a family of $L^1$ dominated 
+random variables such that $\lim_{t \downarrow 0}
+X_t(w) \to X_0(w)$ for all $w \in \Omega$. Then, by DCT, for any $\{t_n\} \subset
+(0,\infty)$ such that $t_n \downarrow 0$, 
+we have $\lim_{n \to \infty} \mathbb{E}[X_{t_n}] = 
+\mathbb{E}[X_0]$. Since this is true for any such sequence, it follows that
+$\lim_{t \downarrow 0}\mathbb{E}[X_t] = \mathbb{E}[X_0]$ in a proper continuous limit
+sense. We will freely use the limit theorem in the continuous setting without
+doing the above pass everytime.
+
 
 \end{solution}
 
@@ -235,9 +375,11 @@ k \neq l &\implies& \mathbb{P}(A_k \cap A_l) = (\dfrac{n-2}{n})^{m}. \\
 So
 \eQb
 \Var[Y] &=& 
-\sum_{1\leq k,l \leq n; k \neq l} (\dfrac{n-2}{n})^{m} - (\dfrac{n-1}{n})^{2m}, \\
+\sum_{1\leq k,l \leq n; k \neq l} (\dfrac{n-2}{n})^{m} - (\dfrac{n-1}{n})^{2m} 
++ \sum_{1 \leq k,l \leq n; k = l} (\dfrac{n-1}{n})^{m} - (\dfrac{n-1}{n})^{2m}  \\
+&=& (n^2-n)(\dfrac{n-2}{n})^m +  n(\dfrac{n-1}{n})^m - n^2(\dfrac{n-1}{n})^{2m} 
 \eQe
-as required.
+as required. \hfill $\qed$
 
 \end{solution}
 
