@@ -216,9 +216,7 @@ With L'hopital's rule, we obtain that
 \lim_{p \downarrow 0} \dfrac{X^{p}(w) - 1}{p} &=& \lim_{p \downarrow 0}
 X^p(w) \log(X(w)) = \log(X(w)),
 \eQe
-for all $w \in \Omega$. 
-By taking the derivatives, one can show that the convergence is in fact monotonic.
-Hence,
+for all $w \in \Omega$. Hence,
 $\{\dfrac{X^p - 1}{p}1_{\{X \geq 1\}}\}_{ q \geq p > 0} 
 \>\>$ is a family of 
 non-negative RVs monotonically decreasing almost surely to $
@@ -242,15 +240,7 @@ as required. \hfill $\qed$
 
 \bigskip
 
-\textbf{(b.2)} Observe that $X^p \to 1$ almost surely as $p \downarrow 0$,
-and $\max(X^q,1)$ dominates $\{X^p\}_{0<p\leq q}$. Therefore, by DCT, and
-the fact that $\lim_{x \to 1} \dfrac{\log x}{x-1} = 1$ by L'hopital, combined with
-$(b)$, we obtain
-\eQb
-\lim_{p \downarrow 0} \dfrac{\log(\mathbb{E}X^p)}{p} &=& 
-\lim_{p \downarrow 0} \dfrac{\log(\mathbb{E}X^p)}{\mathbb{E}X^p -1}
-\dfrac{\mathbb{E}X^p - 1}{p} = \mathbb{E}\log(X)
-\eQe 
+\textbf{(b.2)} 
 
 \textbf{(Remark)} Although all limit theorems are stated so far
 for a countable limit, they apply as well to a continuous limit. 
@@ -277,6 +267,87 @@ doing the above pass everytime.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+We first show the case for non-negative, simple functions. Let $X$ be simple, such that
+\eQb
+X &=& \sum_{k=1}^{l} a_k \mathbbm{1}_{E_k},
+\eQe
+where $a_k \in \mathbb{R}$ for $k = 1,...,l$ and $E_k \in \mathscr{F}$ 
+with $\bigcupdot_{k=1}^{l} E_k = \Omega$. With linearity of expectation,
+\eQb
+\mathbb{E}[X\mathbbm{1}_{A}] &=& \mathbb{E}[\sum_{k=1}^{l} a_k \mathbbm{1}_{E_k}
+\mathbbm{1}_{A}] 
+= \sum_{k=1}^{l} a_k\mathbb{E}[\mathbbm{1}_{E_k} \mathbbm{1}_{A}] \\
+&=& \sum_{k=1}^{l} a_k\mathbb{E}[\mathbbm{1}_{E_k \cap A}] 
+= \sum_{k=1}^{l} a_k \mathbb{P}(E_k \cap A).
+\eQe  
+Similarly,
+\eQb
+\mathbb{E}[X\mathbbm{1}_{A_n}] &=& \sum_{k=1}^{l} a_k\mathbb{P}(E_k \cap A_n) 
+\eQe
+for each $n \geq 1$. Then, it follows that, for all $m \geq 1$,
+\eQb
+\sum_{n=1}^{m} |\mathbb{E}[X\mathbbm{1}_{A_n}]| &=& \sum_{n=1}^{m} \sum_{k=1}^{l} 
+a_k \mathbb{P}(E_k \cap A_n) \\
+&=& \sum_{k=1}^{l} a_k \mathbb{P}(E_k \cap \bigcup_{m\geq n} A_n), \\
+\eQe
+where the equality holds by disjointness of $\{A_n\}$. Since $\bigcup_n A_n = A$,
+we can exploit continuity of probability and obtain 
+\eQb
+\sum_{n} |\mathbb{E}[X\mathbbm{1}_{A_n}]| &=& \lim_{m \to \infty} \sum_{k=1}^{l} a_k
+\mathbb{P}(E_k \cap \bigcup_{m \geq n} A_n) \\
+&=& \sum_{k=1}^{l} a_k \lim_{m \to \infty} \mathbb{P}(E_n \cap \bigcup_{m \geq n}
+A_n) = \sum_{k=1}^{l} a_k \mathbb{P}(E_n \cap A) = \mathbb{E}[X\mathbbm{1}_A].
+\eQe
+Hence, we have shown that for $X$ non-negative and simple, $\sum_{n} 
+\mathbb{E}[X\mathbbm{1}_{A_n}]$ converges absolutely to $\mathbb{E}[X\mathbbm{1}_{A}]$. 
+
+\bigskip
+
+We now extend the case to non-negative integrable functions. 
+Let $X$ be a bounded, measurable, non-negative functions. Choose $\{ \phi_k\}$
+simple functions such that $\phi_k \to X$. By the previous result, 
+we observe
+\eQb
+\sum_{n} \mathbb{E}[\phi_k \mathbbm{1}_{A_n}] = \mathbb{E}[\phi_k \mathbbm{1}_{A}] 
+\>\> (*)
+\eQe
+for any $k \geq 1$. Since $\phi_k \to X$ uniformly, by monotone convergence theorem,
+\eQb
+\mathbb{E}[\phi_k \mathbbm{1}_{A}] \to \mathbb{E}[\phi_k \mathbbm{1}_{A}]
+\eQe
+and
+\eQb
+\mathbb{E}[\phi_k \mathbbm{1}_{A_n}] \to \mathbb{E}[\phi_k \mathbbm{1}_{A_n}]
+\eQe
+which via implies
+\eQb
+\sum_{n} \mathbb{E}[\phi_k \mathbbm{1}_{A_n}] \to \sum_{n} 
+\mathbb{E}[\phi_k \mathbbm{1}_{A_n}].
+\eQe
+Combining (*) with the above limit, we see that 
+$\sum_{n} 
+\mathbb{E}[X\mathbbm{1}_{A_n}]$ converges absolutely and 
+$\sum_{n} 
+\mathbb{E}[X\mathbbm{1}_{A_n}] = \mathbb{E}[\mathbbm{1}_{A}]$ as required.
+By considering the positive part and negative part, we can extend the
+result to any random variable as required. 
+
+\textbf{(ii)} Firstly, observe that
+\eQb
+\mathbb{Q}(\Omega) &=& \dfrac{\mathbb{E}[\mathbbm{1}_{\Omega}]}{\mathbb{E}[X]} = 
+\dfrac{\mathbb{E}[X]}{\mathbb{E}[X]} = 1.
+\eQe
+Hence, it now suffices to show that $\mathbb{Q}$ is countably additive, but from
+the discussion in $(i)$, we see
+\eQb
+\mathbb{Q}(\bigcup_n A_n) &=& \dfrac{\mathbb{E}[X\mathbbm{1}_{\cup_n A_n}]}{
+\mathbb{E}[X]}  
+= \dfrac{\sum_{n} \mathbb{E}[X\mathbbm{1}_{A_n}]}
+{\mathbb{E}[X]} = \sum_n \mathbb{Q}(A_n).
+\eQe
+for any $\{A_n\} \subset \mathscr{F}$ that are pairwise disjoint. So,
+$\mathbb{Q}$ is a probability measure, if $X \geq 0$ and we are done
+\hfill $\qed$
  
 \end{solution}
 
