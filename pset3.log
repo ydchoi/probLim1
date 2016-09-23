@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 SEP 2016 08:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 SEP 2016 09:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**pset2.tex
-(./pset2.tex
+**pset3.tex
+(./pset3.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -616,8 +616,8 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup10
 )
-(./pset2.aux)
-\openout1 = `pset2.aux'.
+(./pset3.aux)
+\openout1 = `pset3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
@@ -673,9 +673,9 @@ LaTeX Info: Redefining \ref on input line 73.
 LaTeX Info: Redefining \pageref on input line 73.
 LaTeX Info: Redefining \nameref on input line 73.
 
-(./pset2.out) (./pset2.out)
+(./pset3.out) (./pset3.out)
 \@outlinefile=\write3
-\openout3 = `pset2.out'.
+\openout3 = `pset3.out'.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -724,84 +724,83 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
 
-<problim-e2-p1.png, id=4, 623.32875pt x 159.59625pt>
-File: problim-e2-p1.png Graphic file (type png)
- <use problim-e2-p1.png>
-Package pdftex.def Info: problim-e2-p1.png used on input line 89.
-(pdftex.def)             Requested size: 278.23827pt x 71.24048pt.
+<prob-e3-p1.png, id=4, 629.35126pt x 59.22125pt>
+File: prob-e3-p1.png Graphic file (type png)
+ <use prob-e3-p1.png>
+Package pdftex.def Info: prob-e3-p1.png used on input line 89.
+(pdftex.def)             Requested size: 278.23827pt x 26.18211pt.
+ [1
 
-[1
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./prob-
+e3-p1.png>] <prob-e3-p2.png, id=30, 624.3325pt x 56.21pt>
+File: prob-e3-p2.png Graphic file (type png)
+ <use prob-e3-p2.png>
+Package pdftex.def Info: prob-e3-p2.png used on input line 138.
+(pdftex.def)             Requested size: 278.23827pt x 25.05067pt.
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./probl
-im-e2-p1.png>] [2] <problim-e2-p2.png, id=34, 621.32124pt x 138.5175pt>
-File: problim-e2-p2.png Graphic file (type png)
-
-<use problim-e2-p2.png>
-Package pdftex.def Info: problim-e2-p2.png used on input line 178.
-(pdftex.def)             Requested size: 278.23827pt x 62.03004pt.
- [3 <./problim-e2-p2.png>] [4]
-<problim-e2-p3.png, id=47, 623.32875pt x 107.40125pt>
-File: problim-e2-p3.png Graphic file (type png)
- <use problim-e2-p3.png>
-Package pdftex.def Info: problim-e2-p3.png used on input line 276.
-(pdftex.def)             Requested size: 278.23827pt x 47.9417pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-[5 <./problim-e2-p3.png>] <problim-e2-p4.png, id=54, 630.355pt x 101.37875pt>
-File: problim-e2-p4.png Graphic file (type png)
+[2 <./prob-e3-p2.png>] <prob-e3-p3.png, id=37, 632.3625pt x 76.285pt>
+File: prob-e3-p3.png Graphic file (type png)
 
-<use problim-e2-p4.png>
-Package pdftex.def Info: problim-e2-p4.png used on input line 289.
-(pdftex.def)             Requested size: 278.23827pt x 44.7491pt.
-LaTeX Font Info:    Try loading font information for U+bbm on input line 306.
+<use prob-e3-p3.png>
+Package pdftex.def Info: prob-e3-p3.png used on input line 150.
+(pdftex.def)             Requested size: 278.23827pt x 33.56549pt.
+ [3 <./prob-e3-p3.png>]
+<prob-e3-p4.png, id=46, 615.29875pt x 95.35625pt>
+File: prob-e3-p4.png Graphic file (type png)
+ <use prob-e3-p4.png>
+Package pdftex.def Info: prob-e3-p4.png used on input line 171.
+(pdftex.def)             Requested size: 278.23827pt x 43.12088pt.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
-File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 327.
- [6 <./problim-e2-p4.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 327.
- (./pset2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
-Package rerunfilecheck Info: File `pset2.out' has not changed.
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+[4 <./prob-e3-p4.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+ (./pset3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package rerunfilecheck Info: File `pset3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 327.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 11942 strings out of 493089
- 176810 string characters out of 6134842
- 257282 words of memory out of 5000000
- 15218 multiletter control sequences out of 15000+600000
- 20891 words of font info for 59 fonts, out of 8000000 for 9000
+ 11921 strings out of 493089
+ 176141 string characters out of 6134842
+ 253282 words of memory out of 5000000
+ 15205 multiletter control sequences out of 15000+600000
+ 20496 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,251b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/yd/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.6
-00pk>{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc
-}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/u
-sr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/l
-ocal/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/local
-/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/tex
-live/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf
--dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
-utmr8a.pfb>
-Output written on pset2.pdf (6 pages, 290287 bytes).
+ 37i,8n,39p,251b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/
+usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/
+local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/loca
+l/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/local/te
+xlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/texliv
+e/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb>
+Output written on pset3.pdf (4 pages, 214949 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
