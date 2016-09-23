@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 SEP 2016 09:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 SEP 2016 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -735,10 +735,10 @@ Package pdftex.def Info: prob-e3-p1.png used on input line 89.
 e3-p1.png>] <prob-e3-p2.png, id=30, 624.3325pt x 56.21pt>
 File: prob-e3-p2.png Graphic file (type png)
  <use prob-e3-p2.png>
-Package pdftex.def Info: prob-e3-p2.png used on input line 138.
+Package pdftex.def Info: prob-e3-p2.png used on input line 144.
 (pdftex.def)             Requested size: 278.23827pt x 25.05067pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
@@ -746,33 +746,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 File: prob-e3-p3.png Graphic file (type png)
 
 <use prob-e3-p3.png>
-Package pdftex.def Info: prob-e3-p3.png used on input line 150.
+Package pdftex.def Info: prob-e3-p3.png used on input line 156.
 (pdftex.def)             Requested size: 278.23827pt x 33.56549pt.
  [3 <./prob-e3-p3.png>]
 <prob-e3-p4.png, id=46, 615.29875pt x 95.35625pt>
 File: prob-e3-p4.png Graphic file (type png)
  <use prob-e3-p4.png>
-Package pdftex.def Info: prob-e3-p4.png used on input line 171.
+Package pdftex.def Info: prob-e3-p4.png used on input line 177.
 (pdftex.def)             Requested size: 278.23827pt x 43.12088pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
 [4 <./prob-e3-p4.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  (./pset3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `pset3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  ) 
 Here is how much of TeX's memory you used:
  11921 strings out of 493089
  176141 string characters out of 6134842
- 253282 words of memory out of 5000000
+ 254282 words of memory out of 5000000
  15205 multiletter control sequences out of 15000+600000
  20496 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -797,7 +797,7 @@ s/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb>
-Output written on pset3.pdf (4 pages, 214949 bytes).
+Output written on pset3.pdf (4 pages, 215503 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream

@@ -94,6 +94,7 @@ Fix $\epsilon > 0$.
 Choose $C \in \mathscr{F}$ such that $\mathbb{P}(C) = 0$,
 and for any $w \in \Omega \setminus C$, 
 there exists $n(w) \geq 1$, such that $|X_n(w)| < \epsilon$, whenever $n \geq n(w)$.
+Set $n(w) = \infty$ for each $w \in C$.
 Now, for each $n \geq 1$, define
 \eQb
 A_n := \{ w: n(w) > n\}. 
@@ -102,13 +103,18 @@ It follows that $\{ A_n \}$ is descending and $\bigcap_n A_n = C$. Therefore, by
 continuity of probability, there exists $n_0$ such that $\mathbb{P}(A_{n_0}) < 
 \epsilon$. Then, it follows that, for any $N:\Omega \to \{ n_0,...\}$, 
 \eQb
-\mathbb{P}(\{w: |X_{n(w)}(w)| > \epsilon\} &\leq& \mathbb{P}(A_{n_0}) < \epsilon, 
+\mathbb{P}(\{w: |X_{N(w)}(w)| > \epsilon\} &\leq& \mathbb{P}(A_{n_0}) < \epsilon. 
 \eQe  
-as required.
+The first inequality holds, because, for all $w \in \Omega$ and $N:\Omega 
+\to \{n_0,...\}$,
+\eQb
+X_{N(w)}(w) > \epsilon &\implies n_0 \leq N(w) < n(w), 
+\eQe
+as required. 
 
 \bigskip
 
-Suppose that $\{x_n\}$ does not converge almost surely to $0$. Choose
+Conversely, suppose that $\{x_n\}$ does not converge almost surely to $0$. Choose
 $E \in \mathscr{F}$ such that $\mathbb{P}(E) > 0$, and $0 < \epsilon < \mathbb{P}(E)$
 such that for any $w \in E$, there exists $\{n_k\}$ such that
 \eQb
