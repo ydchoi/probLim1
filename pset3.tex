@@ -46,7 +46,7 @@
 \usepackage{listings}
 \usepackage{mathrsfs}
 \title{ProbLimI: \\
-Problem Set II}
+Problem Set III}
 
 
 \author{
@@ -76,7 +76,7 @@ New York University\\
 \maketitle
 
 \begin{abstract}
-This work contains solutions to the exercises of the problem set I. The
+This work contains solutions to the exercises of the problem set III. The
 chosen problems are 1,2, and 4.
 \end{abstract}
 
@@ -178,6 +178,51 @@ at $0$. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(i)}
+We assume basic Fourier analysis here.
+Fix $t \in \mathbb{R}$.
+By independence, we have 
+\eQb
+\phi_{Z}(t) &=& \phi_{X}(t)\phi_{X'}(-t) \>\> (*)
+\eQe
+Now, observe that for any random variable $Y$ and $s \in \mathbb{R}$, we have
+\eQb
+\phi_Y(-s) &=& \mathbb{E}\cos(sY) - i\sin(sY) = \overline{\mathbb{E}\cos(sY) + 
+i\sin(sY)} = \overline{\phi_{Y}(s)} 
+\eQe
+As $X'$ and $X$ are identically distributed, from $(*)$, and the above, 
+we obtain
+\eQb
+\phi_{Z}(t) = \phi_{X}(t) \overline{\phi_{X}(t)} = |\phi_{X}(t)|^2.
+\eQe 
+Since $t \in \mathbb{R}$ was arbitrary, we have shown $Z \geq 0$ as required.
+
+\bigskip
+
+\textbf{(ii)} Suppose otherwise. Then, $Z$ has a density $f = \dfrac{1}{b-a}1_{[a,b]}$.
+Then, by a change of variable, for $t \neq 0$,
+\eQb
+\phi_{Z}(t) &=& \int_{a}^{b} \dfrac{e^{itz}}{b-a} dz = \dfrac{e^{itb}-e^{ita}}{
+it(b-a)},
+\eQe
+and $\phi_{Z}(0) = 1$. 
+From $(i)$, we deduce that, for any $t \neq 0$, 
+\eQb
+\cos(tb) &=& \cos(ta). 
+\eQe
+Take $t =1,\sqrt{2}$. Then, as $a < b$, 
+for some $k \in \mathbb{Z}^+$, 
+\eQb
+b &=& 2\pi k + a \\
+\eQe
+and, for some $l \in \mathbb{Z}$,
+\eQb
+\sqrt{2}(2 \pi k + a) &=& 2\pi l + \sqrt{2} a,
+\eQe
+which implies that $l$ is irrational, so we have arrived at a contradiction.
+\hfill $\qed$
+
+
 \end{solution}
 
 \end{document}
