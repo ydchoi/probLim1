@@ -90,6 +90,88 @@ chosen problems are 1,3, and 4.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+By i.i.d. assumption on $\{X_k\}$, 
+\eQnb 
+F_{\frac{M_n - a_n}{b_n}}(x) &=& 
+\mathbb{P}(\dfrac{M_n - a_n}{b_n} \leq x) = \mathbb{P}(M_n \leq a_n + b_n x) 
+= \mathbb{P}(\max_{k \leq n} X_k \leq a_n + b_n x )  \notag \\
+&=& \mathbb{P}(\bigcap_{k \leq n} X_k \leq a_n + b_n x) 
+= \prod_{k \leq n} \mathbb{P}(X_k \leq a_n + b_n x) = (F_{X}(a_n + b_n x))^n
+\label{eq:1}
+\eQne
+for each $n \geq 1$ and $x \in \mathbb{R}$.
+
+\bigskip
+
+\textbf{(a)} Let $x \in \mathbb{R}$. Substituting the givens to \eqref{eq:1}, 
+\eQb
+F_{\frac{M_n - a_n}{b_n}}(x) &=& 
+F_{X}(a_n + b_n x)^n = 
+(1-e^{-\log(n) - x})^n = (1-\dfrac{-e^x}{n}))^n
+\eQe
+for all sufficiently large $n \in \mathbb{N}$.  
+Taking the limit as $n \to \infty$ gives 
+\eQb
+\lim_{n \to \infty} F_{\frac{M_n - a_n}{b_n}}(x) = \exp(-e^{-x}) = F_M(x). 
+\eQe
+Therefore, $\dfrac{(M_n - a_n)}{b_n}$ converges in distribution to $M$.
+
+\bigskip
+
+\textbf{(b)} Let $x > 0$. Substituting the givens to \eqref{eq:1},
+\eQb
+F_{\frac{M_n - a_n}{b_n}}(x) &=& 
+F_{X}(a_n + b_n x)^n = 
+(1-(n^{\frac{1}{\alpha}}x)^{-\alpha})^n = (1-\dfrac{x^{-\alpha}}{n}))^n 
+\eQe
+for all sufficiently large $n \in \mathbb{N}$. Taking the limit as $n \to \infty$
+gives
+\eQb
+\lim_{n \to \infty} F_{\frac{M_n - a_n}{b_n}}(x) &=& \exp(-x^{-\alpha}) = F_{M}(x).
+\eQe
+Let $x \leq 0$. Then 
+\eQb
+a_n + b_n x &=&  n^{\frac{1}{\alpha}}x \leq 0 
+\eQe
+and hence
+\eQb
+F_{\frac{M_n - a_n}{b_n}}(x) &=& (F_X(a_n + b_n x))^n = 0 
+\eQe
+for each $n \geq 1$. Since $F_{M}(x) = 0$ on for $x \leq 0$, we have shown that
+\eQb
+F_{\frac{(M_n - a_n)}{b_n}}(x) &\to& F_{M}(x)   
+\eQe
+for all $x \in \mathbb{R}$, and hence $\dfrac{M_n - a_n}{b_n}$ converges in
+distribution to $M$. 
+
+\bigskip
+
+\textbf{(c)} Let $x < 0$. Then
+\eQb
+F_{\frac{M_n - a_n}{b_n}}(x) &=& (1 - |n^{-\frac{1}{\alpha}}x|^{\alpha})^n 
+= (1 - \dfrac{|x|^{\alpha}}{n})^n
+\eQe 
+for all sufficiently large $n \in \mathbb{N}$. Taking the limit as $n \to \infty$
+gives
+\eQb
+\lim_{n \to \infty} F_{\frac{M_n - a_n}{b_n}}(x) = \exp(-|x|^{\alpha}) = F_M(x).
+\eQe 
+Let $x \geq 0$. Then,
+\eQb
+a_n + b_n x = n^{-\frac{1}{\alpha}} x \geq 0
+\eQe
+and hence
+\eQb
+F_{\frac{m_n - a_n}{b_n}}(x) &=&  (F_X(n^{-\frac{1}{\alpha}}x))^n = 1
+\eQe
+for each $n \geq 1$. Since $F_M(x) = 1$ for all $x \geq 0$, we have shown that
+\eQb
+F_{\frac{(M_n - a_n)}{b_n}}(x) &\to& F_{M}(x)   
+\eQe 
+for all $x \in \mathbb{R}$ and hence $\dfrac{M_n - a_n}{b_n}$ converges in distribution
+to $M$. 
+
+\hfill $\qed$ 
 \end{solution}
 
 \newpage
