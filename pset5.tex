@@ -26,6 +26,7 @@
 \newcommand{\E}{\mathrm{E}}
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
+\newcommand\eqD{\stackrel{\mathclap{\normalfont\mbox{d}}}{=}}
 
 \def\Qb#1\Qe{\begin{question}#1\end{question}}
 \def\Sb#1\Se{\begin{solution}#1\end{solution}}
@@ -256,6 +257,23 @@ in distribution. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+\textbf{(i)}
+Observe that $e^{-X}$ and $e^{-Y}$ are $[0,1]$-valued random variables. Furthermore,
+\eQb
+\mathbb{E}[(e^{-X})^n] &=& \mathbb{E}[e^{-nx}] = \mathbb{E}[e^{-nY}] = 
+\mathbb{E}[(e^{-Y})^n] 
+\eQe 
+for each $n \in \mathbb{N}$. Hence, by the problem $2-(ii)$, 
+\eQb
+e^{-X} \eqD e^{-Y}.
+\eQe
+
+\bigskip
+
+\textbf{(ii)}
+
+\textbf{(iii)}
+
 \end{solution}
 
 \newpage
