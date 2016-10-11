@@ -78,7 +78,7 @@ New York University\\
 
 \begin{abstract}
 This work contains solutions to the exercises of the problem set V. The
-chosen problems are 1,3, and 4.
+chosen problems are 1,2, and 3.
 \end{abstract}
 
 \bigskip
@@ -263,17 +263,138 @@ Observe that $e^{-X}$ and $e^{-Y}$ are $[0,1]$-valued random variables. Furtherm
 \mathbb{E}[(e^{-X})^n] &=& \mathbb{E}[e^{-nx}] = \mathbb{E}[e^{-nY}] = 
 \mathbb{E}[(e^{-Y})^n] 
 \eQe 
-for each $n \in \mathbb{N}$. Hence, by the problem $2-(ii)$, 
+for each $n \in \mathbb{N}$. Hence, by the problem 2-(ii), 
 \eQb
-e^{-X} \eqD e^{-Y}.
+e^{-X} = e^{-Y} \>\>\> \text{ in distribution}.
 \eQe
+It follows that, as $e^{-x}$ is strictly decreasing,
+\eQb
+\mathbb{P}(X \leq t) = \mathbb{P}(e^{-X} \geq e^{-t}) = 
+\mathbb{P}(e^{-Y} \geq e^{-t}) = \mathbb{P}(Y \leq t) 
+\eQe
+for any $t \in \mathbb{R}$. Therefore, $X = Y$ in distribution.
 
 \bigskip
 
-\textbf{(ii)}
+\textbf{(ii)} First note that to show a sequence of distribution is uniformly tight,
+it suffices to show the condition holds for
+all sufficiently large indices in our case, by the regularity 
+property of a Borel probability measure on a polish space. 
 
-\textbf{(iii)}
+\smallskip
 
+
+Fix $1 > \epsilon > 0$. 
+Choose $t_0(\epsilon) > 0$ and $N(t_0) \in \mathbb{N}$ such that
+\eQb
+\E[e^{-t_0 X_n}] &\geq& 1 - \dfrac{\epsilon}{2}
+\eQe
+for any $n \geq N$. 
+By monotonicity of $e^{-x}$, 
+\eQb
+\mathbb{E}[e^{-t_0 X_n}] &\leq& 1\mathbb{P}(X_n \leq \delta) + 
+e^{-t_0 \delta} \mathbb{P}( X_n > \delta) = \mathbb{P}(X_n \leq \delta) 
++ e^{-t_0 \delta} (1- \mathbb{P}(X_n \leq \delta)) \\
+&=&  e^{-t_0 \delta} + (1- e^{-t_0 \delta})\mathbb{P}(X_n \leq \delta) 
+\eQe
+for any $\delta > 0$ and $n \in \mathbb{N}$, and hence
+\eQb
+\dfrac{1 - \frac{\epsilon}{2} - e^{-t_0 \delta}}{1-e^{-t_0 \delta}} 
+&\leq& \mathbb{P}(X_n \leq \delta) \\ 
+\eQe
+for any $\delta > 0$ and $n \geq N$. Since the LHS goes to $1-\dfrac{\epsilon}{2}$ 
+as $\delta \uparrow \infty$, we can choose $\delta_0 > 0$ large enough such that
+\eQb
+1- \epsilon &\leq& \mathbb{P}(X_n \leq \delta_0)  
+\eQe
+for each $n \geq N$. 
+Since $1 >\epsilon > 0$ was arbitrary, we have shown that $\{F_{X_n}\}$ are
+uniformly tight. Hence, there exists a subseqeunce $\{X_{n_k}\}$ that converges
+in distribution to some $X$. By Portmanteau's theorem and the fact that $X_n \geq 0$,
+\eQb
+\mathbb{P}(X < 0) &\leq& \liminf_{n \to \infty} \mathbb{P}(X_n < 0) = 0. 
+\eQe 
+Therefore, we see that $X$, which is a weak limit of $\{X_{n_k}\}$ is non-negative 
+as well.
+
+\bigskip
+
+To show that the full sequence converges in 
+distribution to $X$, we use the following lemma:
+Let $\{X_n\}$ be uniformly tight. 
+If $X$ is the only possible weak limit, i.e. whenver $\{X_{n_k}\}$ converges
+in distribution to $Y$, $X = Y$, then $\{X_n\}$ converges in distribution to $X$.
+We supply a proof here. Suppose otherwise. Then, there exists $x \in \mathbb{R}$
+$\epsilon > 0$, and a subsequence $\{n_j\}$ such that $\mathbb{P}(X = x) \neq 0$
+and
+\eQb
+|\mathbb{P}(X_{n_j} \leq x) - \mathbb{P}(X \leq x)| &\geq& \epsilon
+\eQe 
+for all $j \in \mathbb{N}$. Since $\{X_{n_j}\}$ is tight, we should find a subseuqence
+that converges in distribution, but it is not possible by the above estimate. 
+Therefore, the lemma is proven. 
+
+\bigskip
+
+Now, in view of the lemma, suppose $\{X_{n_j}\}$ converges in distribution to $Y$.
+Then, by weak convergence,
+\eQb
+\mathbb{E}[e^{-tX}] = \lim_{k \to \infty} \mathbb{E}[e^{-tX_{n_k}}] 
+&=& \lim_{j \to \infty} \mathbb{E}[e^{-tX_{n_j}}] = \mathbb{E}[e^{-tY}]
+\eQe 
+for all $t > 0$. Hence, by (i), it follows that $X = Y$, and we have shown that
+$\{X_n\}$ converges in distribution to $X$. Again, by weak convergence,
+\eQb
+\mathbb{E}[e^{-tX}] &=& \lim_{n \to \infty} \mathbb{E}[e^{-tX_n}] = g(t)
+\eQe
+for all $t > 0$ as required and we are done.
+
+\bigskip
+ 
+\textbf{(iii)} Observe that $X_n \geq 0$ for each $n \geq 1$.
+In view of (ii), it suffices to show that
+\eQb
+\lim_{n \to \infty} \mathbb{E}[e^{-tX_n}] = \exp(\int_{0}^{1} \dfrac{1}{x}
+(e^{-xt} - 1) dx)  
+\eQe 
+for any $t > 0$. Suppose the above limit is established. Observe that 
+\eQb
+\dfrac{1}{x}(e^{-xt} - 1) \>\> &\text{converges pointwise a.e to}& \>\> 0 \>\> 
+\text{as} \>\> t \downarrow 0 \>\> \text{on} \>\> [0,1] 
+\eQe
+and
+\eQb
+|\dfrac{1}{x}(e^{-xt}-1)| &=& \dfrac{1}{x}(1-e^{-xt}) \leq \dfrac{1}{x}(xt) \leq t
+\eQe
+for any $ t > 0$ and $x \in (0,1]$. Therefore, by DCT,
+\eQb
+\lim_{t \downarrow 0} g(t) &=& \lim_{t \downarrow 0} \exp(\int_{0}^{1} 
+\dfrac{1}{x} (e^{-xt} - 1)dx) 
+= \exp(\lim_{t \downarrow 0} \int_{0}^{1} \dfrac{1}{x}(e^{-xt}-1)dx) \\
+&=& \exp(\int_{0}^{1} \lim_{t \downarrow 0} \dfrac{1}{x}(e^{-xt}-1)dx) = \exp(0) = 1. 
+\eQe
+We now prove the claimed limit. By independence, 
+\eQb
+\mathbb{E}[e^{-tX_n}] &=& \mathbb{E}[e^{-t \frac{1}{n} \sum_{ j=1}^{n} j I_j }] 
+= \prod_{j=1}^{n} \mathbb{E}[e^{\frac{-tj}{n}I_j}] \\
+&=& \prod_{j=1}^{n} (e^{-\frac{tj}{n}}\mathbb{P}(I_j = 1) + 1\mathbb{P}(I_j = 0)) =
+\prod_{j=1}^{n} (\dfrac{1}{j} e^{-\frac{tj}{n}} + \dfrac{j-1}{j}) 
+\eQe
+for any $t > 0$ and $n \in \mathbb{N}$. By Taylor series' approximation of $\log(1-x)
+\sim -x$,
+\eQb
+\lim_{n \to \infty} \mathbb{E}[e^{-tX_n}] &=& \lim_{n \to \infty} 
+\exp(\log(\prod_{j=1}^{n} \dfrac{1}{j} e^{-\frac{tj}{n}} + \dfrac{j-1}{j})) 
+= \exp(\lim_{n \to \infty} \sum_{j=1}^{n} \log(\dfrac{1}{j} e^{-\frac{tj}{n}} + 
+\dfrac{j-1}{j})) \\
+&=& \exp(\lim_{n \to \infty} \sum_{j=1}^{n} \log(1 - (
+\dfrac{1}{j} - \dfrac{1}{j}e^{-\frac{tj}{n}}))) = \exp(\lim_{n \to \infty} 
+\sum_{j=1}^{n} -(\dfrac{1}{j} - \dfrac{1}{j}e^{\frac{-tj}{n}})) \\
+&=& \exp(\lim_{n \to \infty} \dfrac{1}{n} \sum_{j=1}^{n} 
+\dfrac{n}{j}(e^{
+-\frac{tj}{n}} - 1)) = \exp(\int_{0}^{1} \dfrac{1}{x} (e^{-xt} - 1)dx). 
+\eQe 
+\hfill $\qed$
 \end{solution}
 
 \newpage
