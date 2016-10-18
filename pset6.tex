@@ -391,6 +391,113 @@ and hence
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Verbatim repeat the argument given in the problem $2$ to have
+\eQb
+\mathbb{E}|X| < \infty &\iff& \sum_{n} \mathbb{P}(|X| > n) \>\> \text{converges}
+\eQe
+and
+\eQb
+\mathbb{E}X_{+} < \infty &\iff& \sum_{n} \mathbb{P}(X > n) \>\> \text{converges}.
+\eQe
+
+\smallskip
+
+\textbf{(a)} As $(X_n)$ are identically distributed,
+\eQb
+\sum_{n} \mathbb{P}(|X_1| > n) &=& \sum_n \mathbb{P}(|X_n| > n). 
+\eQe
+Therefore, by Borel-Cantelli I,II and the above equivalences
+\eQb
+\mathbb{P}(|X_n| > n \>\> \text{i.o.} ) = 0  &\iff& \mathbb{E}|X_1| < \infty.
+\eQe
+
+\smallskip
+
+\textbf{(b)} Suppose $\mathbb{E}|X_1| < \infty$. Then,
+\eQb
+\mathbb{E}|\dfrac{X_1}{\alpha}| < \infty
+\eQe
+so, by $(a)$
+\eQb
+\mathbb{P}(n^{-1}|X_n| > \alpha \>\> \text{i.o.}) = 0
+\eQe
+for any $\alpha > 0$. By the same argument given in $1-b$,
+\eQb
+n^{-1}|X_n| \to 0 \>\> \text{a.s.} 
+\eQe
+Conversely, suppose $n^{-1}X_n \to 1$ a.s. Observe that
+\eQb
+\{ n^{-1}X_n \to 0\} 
+&=& \bigcap_{\alpha > 0} \{ n^{-1}X_n \leq \alpha \>\> \text{a.a.} \}.
+\eQe
+With $\alpha = 1$,
+\eQb
+\mathbb{P}(n^{-1}|X_n| \leq 1 \>\> \text{a.a.}) = 1
+\eQe
+so 
+\eQb
+\mathbb{P}(|X_1| > n \>\> \text{i.o.}) = 0.
+\eQe
+which by (a) implies $\mathbb{E}|X_1| < \infty$.
+
+\smallskip
+
+\textbf{(c)} We first show the forward direction. Assume $n^{-1}M_n \to 0$ a.s. 
+Suppose for sake of contradiction that $\mathbb{P}(X_1 > -\infty) = 0$.
+Then, $M_n = -\infty$ a.s. for all $n \geq 1$. Therefore, $n^{-1}M_n \to -\infty$
+a.s, which is a contradiction, and $\mathbb{P}(X_1 > -\infty) > 0$. Now, 
+suppose again for sake of contradiction that $\mathbb{E}(X_1)_{+} = \infty$, then by the 
+equivalence established before, and Borel Cantelli II, we have
+$\mathbb{P}(\{X_n > n \>\> \text{i.o.} \}) = 1$. Then, it follows that
+for a.s. $w \in \Omega$, there exists a subsequence $X_{n_k}(w) > 1$ for all $k$,
+and 
+\eQb
+\limsup M_n(w) \geq \limsup X_n(w) \geq 1 \>\>\> \text{a.s.} 
+\eQe
+which is a contradiction. Now, conversely, suppose there exists a set $A$ 
+with positive probability, where $n^{-1}M_n \not\to 0$. There are two possible cases
+$\mathbb{P}(X_1 > \infty) = 0$ or $\mathbb{P}(X_1 > \infty) > 0$. It suffices to 
+show that if $\mathbb{P}(X_1 >$ 
+
+\smallskip
+
+By iid assumption,
+\eQb
+\mathbb{P}(n^{-1}M_n > \epsilon) &=& 1 - \mathbb{P}(n^{-1}M_n \leq \epsilon)
+= 1 - \mathbb{P}(|n^{-1}X_1| \leq \epsilon)^n = 1 - (1 -\mathbb{P}(|n^{-1}X_1| >
+\epsilon)^n 
+\eQe
+for any $\epsilon > 0$ and $n \geq 1$. Hence
+\eQb
+\lim_{n} \mathbb{P}(n^{-1}M_n > \epsilon) = 1 - \exp(-\mathbb{P}(|n^{-1}X_1| > 
+\epsilon)) 
+\eQe 
+provided the limit exists.
+
+
+\smallskip
+
+\textbf{(d)} Since
+\eQb
+\{|X_1| < \infty \} &=& \{ \dfrac{|X_1|}{\epsilon} < \infty \} 
+= \bigcup_{n=1}^{\infty} \{ \dfrac{|X_1|}{\epsilon} \leq n \} 
+\eQe 
+by continuity of probability,
+\eQb
+\mathbb{P}(|X_1| < \infty) = 1 - \lim_n \mathbb{P}(|n^{-1}X_n| > \epsilon)
+\eQe
+for any $\epsilon > 0$. Therefore,
+\eQb
+\mathbb{P}(|X_1| < \infty) = 1 &\iff& \lim_n \mathbb{P}(|n^{-1}X_n| > \epsilon) = 0 
+\>\> \forall \epsilon > 0.
+\eQe
+By definition $n^{-1}X_n \to_{p} 0$ iff
+\eQb
+\lim_{n} \mathbb{P}(|n^{-1}X_n| > \epsilon) = 0
+\eQe
+for any $\epsilon > 0$, so we are done. \hfill $\qed$
+
+
 \end{solution}
 
 \newpage
