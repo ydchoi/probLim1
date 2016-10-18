@@ -455,24 +455,46 @@ and
 \limsup M_n(w) \geq \limsup X_n(w) \geq 1 \>\>\> \text{a.s.} 
 \eQe
 which is a contradiction. Now, conversely, suppose there exists a set $A$ 
-with positive probability, where $n^{-1}M_n \not\to 0$. There are two possible cases
-$\mathbb{P}(X_1 > \infty) = 0$ or $\mathbb{P}(X_1 > \infty) > 0$. It suffices to 
-show that if $\mathbb{P}(X_1 >$ 
+with positive probability, where $n^{-1}M_n \not\to 0$, and $\mathbb{E}(X_1)_{+}
+< \infty$. Then, we wish to show that $X_1 = -\infty$ a.s. Since negative values
+do not affect the limit behavior of $M_n$, we can further assume that $X$s take
+values that are non-negative or $-\infty$. Therefore, 
+\eQb
+\mathbb{P}(X_1 \geq 0) = 0.
+\eQe
+Since $\mathbb{E}(X_1)_{+}
+< \infty$.
+by Borel Cantelli I, 
+\eQb
+\mathbb{P}(X_n > n \>\>\> \text{i.o.}) = 0
+\eQe
+Hence, there almost everywhere$-w$, we have $X_{n}(w) \leq n$ for all sufficiently
+large $n$, and 
+\eQb
+n^{-1}\limsup_n M_n(w) \leq 1 \>\>\> \text{a.s.}
+\eQe
 
 \smallskip
 
-By iid assumption,
+Assume $n^{-1}M_n \to_p 0$. If $\mathbb{P}(X_1 > -\infty) = 0$, then $n^{-1}M_n \to
+-\infty$ a.s. so $n^{-1}M_n \to_{p} -\infty$, a contradiction. Hence,
+$\mathbb{P}(X_1 > -\infty) > 0$. 
+Now, by iid assumption,
 \eQb
 \mathbb{P}(n^{-1}M_n > \epsilon) &=& 1 - \mathbb{P}(n^{-1}M_n \leq \epsilon)
-= 1 - \mathbb{P}(|n^{-1}X_1| \leq \epsilon)^n = 1 - (1 -\mathbb{P}(|n^{-1}X_1| >
-\epsilon)^n 
+= 1 - \mathbb{P}(|n^{-1}X_1| \leq \epsilon)^n \\
+&=& 1 - (1 -\mathbb{P}(|n^{-1}X_1| >
+\epsilon)^n = 1 - e^{-n\mathbb{P}(|X_1| > n\epsilon)} 
 \eQe
-for any $\epsilon > 0$ and $n \geq 1$. Hence
+for any $\epsilon > 0$ and $n \geq 1$. Hence, by convergence in probability,
+with $\epsilon = 1$,
 \eQb
-\lim_{n} \mathbb{P}(n^{-1}M_n > \epsilon) = 1 - \exp(-\mathbb{P}(|n^{-1}X_1| > 
-\epsilon)) 
-\eQe 
-provided the limit exists.
+n\mathbb{P}(|X_1| > \epsilon ) \to 0 
+\eQe
+so 
+\eQb
+n\mathbb{P}(|X_1| > \epsilon ) \to 0 
+\eQe
 
 
 \smallskip
