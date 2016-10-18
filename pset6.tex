@@ -141,32 +141,99 @@ for all $k \in \mathbb{N}$, which implies
 \eQe
 By Borel-Cantelli I, 
 \eQb
-\mathbb{P}(|\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1| > \epsilon \>\>\>\> i.o) &=& 0
+\mathbb{P}(|\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1| > \epsilon \>\>\>\> \text{i.o.}) 
+&=& 0
 \eQe
 for any $\epsilon > 0$. Now, by definition of pointwise convergence,
 \eQb
 \mathbb{P}(\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} \to 1) &=& 
 \mathbb{P}(\bigcap_{\epsilon > 0} \{|\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1|
-< \epsilon \>\> \text{a.a} \} ) 
+\leq \epsilon \>\> \text{a.a.} \} ) 
 = 1 - \mathbb{P}(\bigcup_{\epsilon > 0} \{ |\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1|
-\geq \epsilon \>\> \text{i.o.} \} )   
+> \epsilon \>\> \text{i.o.} \} )   
 \eQe
 By density of rationals and the above result,
 \eQb
 \mathbb{P}(\bigcup_{\epsilon > 0} \{ |\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1|
-\geq \epsilon \>\> \text{i.o.} \} )  
+> \epsilon \>\> \text{i.o.} \} )  
 &=& \mathbb{P}(\bigcup_{\epsilon > 0; \epsilon \in \mathbb{Q}}
-\{ |\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1| \geq \epsilon \>\> \text{i.o.}\}) \\ 
+\{ |\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1| > \epsilon \>\> \text{i.o.}\}) \\ 
 &\leq&
 \sum_{\epsilon > 0; \epsilon \in \mathbb{Q}}
 \mathbb{P}(
-|\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1| \geq \epsilon \>\> \text{i.o.}) = 0 
+|\dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} - 1| > \epsilon \>\> \text{i.o.}) = 0 
 \eQe
 and hence
 \eQb
 \dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} &\to& 1 \>\>\> \text{almost surely}.
 \eQe
 
+\bigskip
+
+\textbf{(iii)} Observe that 
+\eQb
+|\mathbb{E}[S_{n+1}] - \mathbb{E}[S_{n}]| = \mathbb{P}(A_{n+1}) \leq 1 
+\eQe
+for all $n \geq 1$, which implies that 
+$\{n_k\}$ chosen is strictly increasing as a function $k$ and 
+\eQb
+\mathbb{E}[S_{n_{k}}] &<& (k+1)^2  
+\eQe 
+for all $k \geq 1$. Therefore,
+\eQb
+1 &\leq& \dfrac{\mathbb{E}[S_{n_{k+1}}]}{\mathbb{E}[S_{n_{k}}]} 
+\leq \dfrac{(k+2)^2}{k^2} 
+\eQe
+for all $k \geq 1$, and hence, taking $k \to \infty$, 
+\eQb
+\lim_{k \to \infty} \dfrac{\mathbb{E}[S_{n_{k+1}}]}{\mathbb{E}[S_{n_{k}}]} &=& 1. 
+\eQe
+Now, let $w \in \Omega$ such that $\dfrac{S_{n_k(w)}}{\mathbb{E}[S_{n_k}]} \to 1$.
+Recall that
+\eQb
+S_{n}(w) \leq S_{n+1}(w) \>\>\>\> &\text{and}& \>\>\>\> 
+\mathbb{E}[S_n] \leq \mathbb{E}[S_{n+1}]  
+\eQe
+for all $n \geq 1$, and hence
+\eQb
+\dfrac{\mathbb{E}[S_{n_{k}}]}{\mathbb{E}[S_{n_{k+1}}]} 
+\dfrac{S_{n_k}(w)}{\mathbb{E}[S_{n_{k}}]} 
+= \dfrac{S_{n_k}(w)}{\mathbb{E}[S_{n_{k+1}}]} &\leq&
+\dfrac{S_{n}(w)}{\mathbb{E}[S_{n}]} \leq 
+\dfrac{S_{n_{k+1}}(w)}{\mathbb{E}[S_{n_{k}}]}  
+=
+\dfrac{S_{n_{k+1}}(w)}{\mathbb{E}[S_{n_{k+1}}]} 
+\dfrac{\mathbb{E}[S_{n_{k+1}}]}{\mathbb{E}[S_{n_{k}}]} 
+\eQe
+for any $k \in \mathbb{N}$ and $n_{k} \leq  n < n_{k+1}$. Set
+\eQb
+L_n = \dfrac{\mathbb{E}[S_{l}]}{\mathbb{E}[S_{u}]} 
+\dfrac{S_{l}(w)}{\mathbb{E}[S_{l}]} \>\>\> &\text{and}& \>\>\>
+U_n = \dfrac{\mathbb{E}[S_{u}]}{\mathbb{E}[S_{l}]} 
+\dfrac{S_{u}(w)}{\mathbb{E}[S_{u}]} 
+\eQe
+where $l = \sup \{ n_k  \> : \> n_k \leq n ; k \in \mathbb{N} \}$
+and $u = \inf 
+\{ n_k  \> : \> n_k > n ; k \in \mathbb{N} \}$, for any $n \in \mathbb{N}$.
+Then,
+\eQb
+1 = \lim_{n \to \infty} L_n
+\leq
+\limsup_{n \to \infty} \dfrac{S_{n}(w)}{\mathbb{E}[S_{n}]} \leq 
+\liminf_{n \to \infty}  \dfrac{S_{n}(w)}{\mathbb{E}[S_{n}]} \leq 
+\lim_{n \to \infty} U_n = 1
+\eQe
+and hence
+\eQb
+\{ \dfrac{S_{n_k}}{\mathbb{E}[S_{n_k}]} \to 1 \}
+&\subset&
+\{ \dfrac{S_{n}}{\mathbb{E}[S_{n}]} \to 1 \}
+\eQe
+which implies
+\eQb
+\dfrac{S_{n}}{\mathbb{E}[S_{n}]} &\to& 1 \>\>\> \text{almost surely}.
+\eQe
+\hfill $\qed$
 \end{solution}
 
 \newpage
@@ -282,6 +349,35 @@ Therefore,
 \bigskip
 
 \textbf{(c)}
+Firstly, by reverse triangle inequality,
+\eQb
+|n^{-\frac{1}{\alpha}}|S_{n-1}| - n^{-\frac{1}{\alpha}}|X_n|| 
+ &\leq& n^{-\frac{1}{\alpha}} |S_n| 
+\eQe
+for all $n \geq 2$, and hence, by elementary properties of $\limsup$
+\eQb
+\limsup n^{-\frac{1}{\alpha}} |X_n| &\leq& 
+\limsup (n^{-\frac{1}{\alpha}} |X_n| - n^{-\frac{1}{\alpha}} |S_{n-1}|) 
++ \limsup n^{-\frac{1}{\alpha}} |S_{n-1}| \\
+&=& 
+\limsup (n^{-\frac{1}{\alpha}} |X_n| - n^{-\frac{1}{\alpha}} |S_{n-1}|) 
++ \limsup (n-1)^{-\frac{1}{\alpha}} |S_{n-1}| 
+\limsup (\dfrac{n}{n-1})^{-\frac{1}{\alpha}} \\
+&=& 
+\limsup (n^{-\frac{1}{\alpha}} |X_n| - n^{-\frac{1}{\alpha}} |S_{n-1}|) 
++ \limsup n^{-\frac{1}{\alpha}} |S_{n}| \\
+&\leq& 
+2\limsup n^{-\frac{1}{\alpha}} |S_{n}|.
+\eQe 
+By the above estimate,
+\eQb
+\{ \limsup n^{-\frac{1}{\alpha}} |X_n| = \infty\} &\subset& 
+\{ \limsup n^{-\frac{1}{\alpha}} |S_n| = \infty\}
+\eQe
+and hence
+\eQb
+\limsup n^{-\frac{1}{\alpha}}|S_n| = \infty &\>\>\>& \text{a.s.}
+\eQe
 
 \end{solution}
 
