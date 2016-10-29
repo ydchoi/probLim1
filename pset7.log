@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 OCT 2016 10:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 OCT 2016 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**pset6.tex
-(./pset6.tex
+**pset7.tex
+(./pset7.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
@@ -616,8 +616,8 @@ Package: listings 2014/09/06 1.5e (Carsten Heinz)
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup10
 )
-(./pset6.aux)
-\openout1 = `pset6.aux'.
+(./pset7.aux)
+\openout1 = `pset7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
@@ -673,9 +673,9 @@ LaTeX Info: Redefining \ref on input line 74.
 LaTeX Info: Redefining \pageref on input line 74.
 LaTeX Info: Redefining \nameref on input line 74.
 
-(./pset6.out) (./pset6.out)
+(./pset7.out) (./pset7.out)
 \@outlinefile=\write3
-\openout3 = `pset6.out'.
+\openout3 = `pset7.out'.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -724,52 +724,55 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 
-<prob-e6-p1.png, id=4, 641.39626pt x 117.43875pt>
-File: prob-e6-p1.png Graphic file (type png)
- <use prob-e6-p1.png>
-Package pdftex.def Info: prob-e6-p1.png used on input line 90.
-(pdftex.def)             Requested size: 278.23827pt x 50.94566pt.
- [1
+<prob-e7-p2.png, id=4, 635.37375pt x 274.02374pt>
+File: prob-e7-p2.png Graphic file (type png)
+ <use prob-e7-p2.png>
+Package pdftex.def Info: prob-e7-p2.png used on input line 90.
+(pdftex.def)             Requested size: 278.23827pt x 120.00217pt.
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./prob-
-e6-p1.png>] [2] [3] <prob-e6-p2.png, id=42, 634.37pt x 124.465pt>
-File: prob-e6-p2.png Graphic file (type png)
-
-<use prob-e6-p2.png>
-Package pdftex.def Info: prob-e6-p2.png used on input line 245.
-(pdftex.def)             Requested size: 278.23827pt x 54.59193pt.
- [4 <./prob-e6-p2.png>]
-Overfull \hbox (7.3361pt too wide) in alignment at lines 371--371
+Overfull \hbox (43.74889pt too wide) in alignment at lines 131--131
  [][][] []
  []
 
-[5] <prob-e6-p3.png, id=53, 623.32875pt x 160.6pt>
-File: prob-e6-p3.png Graphic file (type png)
- <use prob-e6-p3.png>
-Package pdftex.def Info: prob-e6-p3.png used on input line 390.
-(pdftex.def)             Requested size: 278.23827pt x 71.68854pt.
 
-[6 <./prob-e6-p3.png>] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
- (./pset6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 579.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 579.
-Package rerunfilecheck Info: File `pset6.out' has not changed.
+Underfull \vbox (badness 4569) has occurred while \output is active []
+
+ [1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./prob-
+e7-p2.png>] [2] <prob-e7-p3.png, id=40, 648.4225pt x 310.15875pt>
+File: prob-e7-p3.png Graphic file (type png)
+ <use prob-e7-p3.png>
+Package pdftex.def Info: prob-e7-p3.png used on input line 196.
+(pdftex.def)             Requested size: 278.23827pt x 133.09116pt.
+
+[3 <./prob-e7-p3.png>] [4] <prob-e7-p4.png, id=51, 634.37pt x 190.7125pt>
+File: prob-e7-p4.png Graphic file (type png)
+
+<use prob-e7-p4.png>
+Package pdftex.def Info: prob-e7-p4.png used on input line 281.
+(pdftex.def)             Requested size: 278.23827pt x 83.64894pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
+ [5 <./prob-e7-p4.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
+ (./pset7.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
+Package rerunfilecheck Info: File `pset7.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 579.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
  ) 
 Here is how much of TeX's memory you used:
- 11919 strings out of 493089
- 176057 string characters out of 6134842
- 260298 words of memory out of 5000000
+ 11917 strings out of 493089
+ 176045 string characters out of 6134842
+ 259284 words of memory out of 5000000
  15202 multiletter control sequences out of 15000+600000
  20496 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,39p,251b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/
-usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/
-local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/loca
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/
+usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/
+local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/loca
 l/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/local/te
 xlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/local/texliv
 e/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-di
@@ -783,14 +786,15 @@ s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb>
-Output written on pset6.pdf (7 pages, 304297 bytes).
+pe1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb>
+Output written on pset7.pdf (5 pages, 366891 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
