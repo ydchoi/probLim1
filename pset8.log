@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 OCT 2016 11:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 NOV 2016 09:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -730,85 +730,87 @@ File: prob-e8-p1.png Graphic file (type png)
 Package pdftex.def Info: prob-e8-p1.png used on input line 90.
 (pdftex.def)             Requested size: 278.23827pt x 25.61577pt.
 
-<prob-e8-p2.png, id=6, 629.35126pt x 156.585pt>
-File: prob-e8-p2.png Graphic file (type png)
- <use prob-e8-p2.png>
-Package pdftex.def Info: prob-e8-p2.png used on input line 136.
-(pdftex.def)             Requested size: 278.23827pt x 69.22733pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
+LaTeX Warning: Reference `eq: 1-1' on page 1 undefined on input line 106.
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./prob-
-e8-p1.png>] <prob-e8-p3.png, id=29, 640.3925pt x 225.84375pt>
-File: prob-e8-p3.png Graphic file (type png)
+e8-p1.png>] [2] <prob-e8-p2.png, id=33, 629.35126pt x 156.585pt>
+File: prob-e8-p2.png Graphic file (type png)
 
-<use prob-e8-p3.png>
-Package pdftex.def Info: prob-e8-p3.png used on input line 148.
-(pdftex.def)             Requested size: 278.23827pt x 98.12405pt.
+<use prob-e8-p2.png>
+Package pdftex.def Info: prob-e8-p2.png used on input line 156.
+(pdftex.def)             Requested size: 278.23827pt x 69.22733pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
- []
+LaTeX Warning: Reference `eq:2.22' on page 3 undefined on input line 168.
 
-[2 <./prob-e8-p2.png> <./prob-e8-p3.png>]
-<prob-e8-p4.png, id=38, 607.26875pt x 187.70125pt>
+[3 <./prob-e8-p2.png>] [4] <prob-e8-p4.png, id=48, 607.26875pt x 187.70125pt>
 File: prob-e8-p4.png Graphic file (type png)
- <use prob-e8-p4.png>
-Package pdftex.def Info: prob-e8-p4.png used on input line 160.
+
+<use prob-e8-p4.png>
+Package pdftex.def Info: prob-e8-p4.png used on input line 261.
 (pdftex.def)             Requested size: 278.23827pt x 86.00279pt.
 
 
-Package hyperref Warning: Suppressing empty link on input line 184.
+LaTeX Warning: Reference `eq:4' on page 5 undefined on input line 285.
 
 
-Package hyperref Warning: Suppressing empty link on input line 191.
+LaTeX Warning: Reference `eq:4.1' on page 5 undefined on input line 292.
 
-[3 <./prob-e8-p4.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+[5 <./prob-e8-p4.png>]
+
+LaTeX Warning: Reference `eq:4.2' on page 6 undefined on input line 336.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
+[6] [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 390.
  (./pset8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 390.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 390.
 Package rerunfilecheck Info: File `pset8.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 390.
  ) 
 Here is how much of TeX's memory you used:
- 11926 strings out of 493089
- 176182 string characters out of 6134842
- 259348 words of memory out of 5000000
- 15208 multiletter control sequences out of 15000+600000
+ 11928 strings out of 493089
+ 176145 string characters out of 6134842
+ 259285 words of memory out of 5000000
+ 15207 multiletter control sequences out of 15000+600000
  20496 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,39p,251b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/
-usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/
-local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/loca
-l/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/local/te
-xlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb>
-Output written on pset8.pdf (4 pages, 292331 bytes).
+ 37i,11n,39p,251b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/
+usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/
+local/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/loca
+l/texlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/local/te
+xlive/2015/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/local/texliv
+e/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/mnsymbol/MnSymbol5.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/
+times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr
+8a.pfb>
+Output written on pset8.pdf (7 pages, 288975 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
