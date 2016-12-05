@@ -78,37 +78,38 @@ New York University\\
 
 \begin{abstract}
 This work contains solutions to the exercises of the problem set X. The
-chosen problems are 1,3,4.
+chosen problems are 2,3,4.
 \end{abstract}
 
 \bigskip
 
 
-\begin{question}[1]
-\hfill
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.7\textwidth]{prob-e10-p1.png}
-\end{figure}
+\begin{question}[2]
 \end{question}
 \begin{solution} \hfill \\
-\textbf{(a)} Observe that
+\textbf{(a)}
+Observe that
 \eQb
-\{\tau_{t} \leq n \} &=& \{ \inf\{m \geq 1 \> : \> S_m \geq t \} \leq n \} \\
-&=& \bigcup_{m=1}^{n} \{S_m \geq t \} \in \sigma(X_1,...,X_n) = \mathscr{F}_n 
+\mathbb{P}(y_{n+1} = 1 | y_1 = i, ...,  y_{n} = i_n ) &=& 
+\dfrac{\int_{0}^{1} z^{n+1} (1-z)^{n-N} dz}{\int_{0}^{1} z^n (1-z)^{n-N} dz}
+= \dfrac{N+1}{N+2} = \dfrac{S_n + n + 2}{2n + 4} 
 \eQe
-for any $n \geq 1$ and $t \geq 0$, and hence $\tau_t$ is an $\mathscr{F}_t$ 
-measurable. 
-
-\smallskip
-
-Suppose $\tau$ is a $\mathscr{F}_n$ stopping time and there exists a positive integer
-$m$ and $\epsilon > 0$ such that
+so 
 \eQb
-\mathbb{P}(\tau \leq n + m \> | \> \mathscr{F}_n) > \epsilon
+\mathbb{P}(S_{n+1} = s| \mathscr{F}_n) \in \sigma(S_n)
 \eQe
-for all $n \geq 1$. 
+and 
+\eQb
+\mathbb{P}(S_{n+1} = s | \mathscr{F}_n) = \mathbb{P}(S_{n+1} = s| s_n).
+\eQe
+Therefore, $\{S_n\}$ is a Markov chain.
 
+\textbf{(b)} From the above formula, the transition probability is 
+$\dfrac{n - x -2}{2n+4}$ if $y = x-1$, $\dfrac{n+x+2}{2n+4}$ if  $y = x+1$,
+and $0$ otherwise. 
+
+\textbf{(c)} Not homogeenous, as the transition probability depends on $n$.
+\hfill $\qed$
 
 \end{solution}
 
@@ -176,24 +177,96 @@ where~\eqref{eq:3} holds by disjointness. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-\textbf{(a)}
-We claim that
+\textbf{(a)} 
+Denote $\theta_k$ as a shift operator of the chain. As $S$ is finite,
+choose $m$ such that $\epsilon = \min_{s \in S} \mathbb{P}_s(\tau_T \leq m) > 0$.
+Then, with $k \geq 2$,
 \eQb
-\mathbb{P}(X_i \in B | X_0 = x) = \mathbb{P}(X_n \in B | X_{n-i} = x) 
+\mathbb{P}_s(\tau_T > km) &=& \mathbb{P}_s(\tau_T > (k-1)m, \tau_T \circ \theta_{
+(k-1)m} > m) \\
+&=& \mathbb{E}_s(\mathbb{P}_s \circ \theta_{(k-1)m} > m | \mathscr{F}_{(k-1)m} 
+1_{\{\tau_T > (k-1)m\}}) \\
+&\leq&\mathbb{P}_s(\tau_T > (k-1)m) 
 \eQe
-for any $n \geq 1$ and $n \geq i \geq 1$. We proceed by induction on $i$. Then,
+where the last inequality holds by Markov property. $k=1$ is obvious, so
+by induction we are done. By summability, $\tau_{T}m^{-1} < \infty$
+almost surely, so $\tau_{T} < \infty$ almost surely.
+
+
+\bigskip
+
+\textbf{(b)} If $x \in A$, then
 \eQb
-\mathbb{P}_{x_0}(X_n \in B , \tau_{x,k} \leq n) &=& 
-\mathbb{P}_{x_0}(\bigcup_{i=0}^{n-k} X_n \in B , \tau_{x,k} = n-i) 
-\eQe 
+\tau_{A} = 0 \>\>\> \text{and} >\>\> 
+\tau_{B} \geq 1 \>\>\> \mathbb{P}_x \>\>\> \text{almost surely}, 
+\eQe
+and hence $h(x) = \mathbb{P}_x(\tau_A < \tau_B) = 1$ for $x \in A$. Similarly,
+$h(x) = 0$ for $x \in B$. 
+
+for any $x \in S$. Suppose $x \not\in T$. Then,
+\eQb
+1_{\tau_{A} < \tau_{B}} \circ \theta_1 = 1_{\tau_B < \tau_B}
+\eQe
+and hence
+\eQb
+\mathbb{E}_X(\tau_{A} < \tau_B) = \mathbb{E}_X(\mathbb{P}_{X_1}(\tau_A < \tau_B))
+= \mathbb{E}_{X}[h(x_1)].
+\eQe
+Therefore $h$ is harmonic.
+
 
 \bigskip
 
-\textbf{(b)}
+\textbf{(c)} Fix $n \geq 1$, and $E \in \mathscr{F}_n$.
+By definition of conditional expectation, we wish to show
+\eQb
+\int_{E} Y_{n+1} = \int_{E} Y_n 
+\eQe
+which can be rewritten as
+\eQb
+\int_{E \cap \{\tau_T \leq n\}} Y_{n+1}  \int_{E \cap \{ \tau_T > n\}} 
+Y_{n+1} 
+&=& \int_{E \cap \{\tau_T \leq n\}} Y_{n} +  \int_{E \cap \{ \tau_T > n\}}  
+Y_{n} 
+\eQe
+Observe that 
+\eQb
+Y_{n+1} = Y_{n} \>\>\> \text{on} \>\>\> \{\tau_T \leq n \} 
+\eQe
+as well as
+\eQb
+Y_{n+1} = g(X_{n+1}) \>\>\> \text{and} \>\>\> 
+Y_{n} = g(X_n) \>\>\> \text{on} \>\>\> \{\tau_T > n \}. 
+\eQe
+Therefore, it suffices to show that
+\eQb
+\int_{E \cap \{ \tau_T > n\}} 
+g(X_{n+1}) 
+&=& 
+\int_{E \cap \{ \tau_T > n\}}  
+g(X_n). 
+\eQe
 
+Now, by harmonic,
+\eQb
+\sum_{\omega \in \Omega} \mathbb{P}(s,\omega) X_n(\omega) = X_n(s) 
+\eQe
 
-\bigskip
-
+and
+\eQb
+\sum_{s \in S} \int_{E \cap \{ X_n = s\} } g(X_{n+1}) &=& 
+\sum_{s \in S} \int_{E \cap \{ X_n = s\} } g(X_{n})  
+\eQe
+By harmonic 
+\eQb
+\sum_{s \in S} \int_{E \cap \{ X_n = s\} } g(X_{n+1}) &=&
+\sum_{s \in S} X_n(s) \mathbb{P}(A_s)   
+\eQe
+and 
+\eQb
+\sum_{s \in S} \int_{E \cap \{ X_n = s\} } g(X_{n+1}) &=& 
+\sum_{s \in S} X_n(s) \mathbb{P}(A_s)   
+\eQe
 
 
 \end{solution}
