@@ -186,11 +186,22 @@ From the above,
 \eQe 
 Therefore, by Fubini,
 \eQb
-\mathbb{E}[\xi_{\tau}] = 
+\mathbb{E}[S_{\tau}] = 
 \mathbb{E}[\sum_{i=1}^{\infty} \xi_i 1_{\{i \leq \tau\}}] &=&
 \sum_{i=1}^{\infty} \mathbb{E}[\xi_i 1_{\{i \leq \tau\}}] = \mathbb{E}[\xi_1]
 \mathbb{E}[\tau]. 
 \eQe
+
+\bigskip
+
+\textbf{(b)} 
+Hence without loss of generality, we can assume $\mathbb{E}[\xi_1] = 0$, so
+it suffices to show that
+\eQb
+\mathbb{E}[S_{\tau}] &=& \text{Var}(\xi_1) \mathbb{E}[\tau]
+\eQe 
+
+
 \end{solution}
 
 \end{document}
