@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 DEC 2016 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 DEC 2016 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,26 +739,22 @@ File: problim-e13-p2.png Graphic file (type png)
 <use problim-e13-p2.png>
 Package pdftex.def Info: problim-e13-p2.png used on input line 148.
 (pdftex.def)             Requested size: 278.23827pt x 44.37648pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-[2 <./problim-e13-p2.png>] <problim-e13-p3.png, id=36, 642.4pt x 187.70125pt>
+ [2 <./problim-e13-p2.png>]
+<problim-e13-p3.png, id=36, 642.4pt x 187.70125pt>
 File: problim-e13-p3.png Graphic file (type png)
-
-<use problim-e13-p3.png>
-Package pdftex.def Info: problim-e13-p3.png used on input line 160.
+ <use problim-e13-p3.png>
+Package pdftex.def Info: problim-e13-p3.png used on input line 181.
 (pdftex.def)             Requested size: 278.23827pt x 81.29996pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
- [3 <./problim-e13-p3.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+
+[3 <./problim-e13-p3.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  (./pset13.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `pset13.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
  11918 strings out of 493089
@@ -785,7 +781,7 @@ nts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb>
-Output written on pset13.pdf (3 pages, 245005 bytes).
+Output written on pset13.pdf (3 pages, 253867 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

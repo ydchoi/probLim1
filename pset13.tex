@@ -107,7 +107,7 @@ as $\{X_n^2\}$ is a sub-martingale as well, by being a martingale.
 
 \bigskip
 
-\textbf{(b)} Let $\{ X_n \}$ i.i.d random variables be defined by
+\textbf{(b)} Let $\{ X_n \}$ independent random variables be defined by
 \eQb
 \mathbb{P}(X_n = -1) = 1  - \dfrac{1}{2^n} \>\>\> \text{and} \>\>\>
 \mathbb{P}(X_n = 2^{n} - 1) = \dfrac{1}{2^n} 
@@ -141,7 +141,7 @@ $\sup_n \mathbb{E}[|S_n|]$ is not bounded.
 
 \newpage
 
-\begin{question}[3]
+\begin{question}[2]
 \hfill
 \begin{figure}[h!]
   \centering
@@ -149,11 +149,32 @@ $\sup_n \mathbb{E}[|S_n|]$ is not bounded.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Let $Z_n = \dfrac{X_n}{\prod_{m=1}^{n-1} (1+Y_m)}$. Then, $Z_n \in \mathscr{F}_n$
+and $\mathbb{E}|Z_n| \leq \mathbb{E}|X_n| < \infty$ for all $n \geq 1$. 
+We claim that $\{ Z_n\}$ is a non-negative supermartingale. We compute
+\eQb
+\mathbb{E}[Z_{n-1}| \mathscr{F}_n] 
+= \dfrac{1}{\prod_{m=1}^{n} (1+Y_m)} \mathbb{E}[X_{n+1}|\mathscr{F}_n] 
+\leq 
+\dfrac{1}{\prod_{m=1}^{n} (1+Y_m)} X_n = Z_n. 
+\eQe
+Therefore, by Martingale convergence theorem, $Z_n \to Z_{\infty}$ a.s.
+to some almost surely finite random variable $Z_{\infty}$.
+As $\sum_{n} Y_n < \infty$ a.s., 
+\eQb
+\prod_{m=1}^{n}(1+Y_m) \>\>\> \text{converges to a finite limit a.s.} 
+\eQe
+and hence
+\eQb
+X_n \to Z_{\infty} \prod_{m=1}^{\infty} (1+Y_m) a.s. 
+\eQe
+so we are done. \hfill $\qed$
+
 \end{solution}
 
 \newpage
 
-\begin{question}[4]
+\begin{question}[3]
 \hfill
 \begin{figure}[h!]
   \centering
@@ -198,10 +219,23 @@ Therefore, by Fubini,
 Hence without loss of generality, we can assume $\mathbb{E}[\xi_1] = 0$, so
 it suffices to show that
 \eQb
-\mathbb{E}[S_{\tau}] &=& \text{Var}(\xi_1) \mathbb{E}[\tau]
+\text{Var}[S_{\tau}] &=& \mathbb{E}[\xi_1] \mathbb{E}[\tau].
 \eQe 
+Suppose for a moment that $\tau$ is bounded by some constant $M$. Then, by (a),
+\eQb
+\text{Var}(S_{\tau}) &=& \mathbb{E}[S_{\tau}^2] = \mathbb{E}[\sum_{i=1}^{n}
+\xi_i 1_{\{i \leq \tau\}} )^2] \\
+&=& \mathbb{E}[\sum_{i=1}^{M}(\xi_i^2 1_{\{i \leq \tau\}}) = \mathbb{E}[\xi_1^2]
+\mathbb{E}[\tau]
+\eQe
+where the cross terms are $0$ by independence. Now, for $\tau$ not bounded, let
+$\rho_k = \min(\tau , k) $ for all $k$. Then with $(a)$ and MCT the result follows.
 
+\textbf{(c)} The identity from a is still true, and with the convention given,
+we should have the result from a as well.
 
 \end{solution}
+
+\newpage
 
 \end{document}
