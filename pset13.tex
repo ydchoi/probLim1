@@ -238,4 +238,53 @@ we should have the result from a as well.
 
 \newpage
 
+\begin{question}[4]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{problim-e13-p4.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+
+\text{(a)} Let $\lambda > 0$. First of all, $\{M_n\}$ is a martingale, since
+\eQb
+\mathbb{E}[M_{n+1}| \mathscr{F}_n] &=& \mathbb{E}[e^{\lambda S_{n+1}}
+M(\lambda)^{-(n+1)} | \mathscr{F}_n] = M(\lambda)^{-(n+1)}
+\mathbb{E}[e^{\lambda S_n} e^{\lambda \xi_{n+1}} | \mathscr{F}_n] \\
+&=& M(\lambda)^{-(n+1)} e^{\lambda S_n} \mathbb{E}[e^{\lambda \xi_{n+1}}] 
+= e^{\lambda S_n} M(\lambda)^{-n}
+\eQe
+for each $n \geq 1$. Now, $\{\tau_z \wedge n\}$ are bounded stopping times, so
+by theorem 5.4.1 in Durrett,
+\eQb
+\mathbb{E}[M_{n \wedge \tau_z}] = \mathbb{E}[M_1] = \mathbb{E}[e^{-\lambda \xi_1}
+e^{\lambda \xi_1}] = 1
+\eQe 
+for each $n \geq 1$. Observe that $\mathbb{E}|M_{n \wedge \tau_z}| \leq
+e^{\lambda z} M(\lambda)^{-n} < \infty $ for all $n \geq 1$, so by DCT
+\eQb
+\mathbb{E}[M_{n \wedge \tau_z} \to \mathbb{E}[M_{\tau_z}] \>\>\> \text{as} 
+\>\>\> n \to \infty
+\eQe
+and hence
+\eQb
+\mathbb{E}[e^{\lambda S_{\tau_z}} M(\lambda)^{-\tau_z}] = 1.
+\eQe
+As $z$ is positive, and $\dfrac{1}{2} \leq p < 1$, 
+$\mathbb{P}(\tau_z < \infty) = 1$, we have $\mathbb{P}(S_{\tau_z} = z ) = 1$.
+Therefore, 
+\eQb
+\mathbb{E}[e^{\lambda z}M(\lambda)^{-\tau_z}] = 1 
+\eQe
+and hence
+\eQb
+\mathbb{E}[M(\lambda)^{-\tau_z}] = e^{-\lambda z}.
+\eQe
+
+
+Now, let $0 < \alpha < 1$. Then, choose $\lambda > 0$ such that  
+
+
+\end{solution}
 \end{document}
