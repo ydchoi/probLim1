@@ -1,0 +1,213 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips14submit_e,times}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
+
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{MnSymbol}
+
+\def\eQb#1\eQe{\begin{eqnarray*}#1\end{eqnarray*}}
+\def\eQnb#1\eQne{\begin{eqnarray}#1\end{eqnarray}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\pb}[0]{\pagebreak}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand\eqD{\stackrel{\mathclap{\normalfont\mbox{d}}}{=}}
+
+\def\Qb#1\Qe{\begin{question}#1\end{question}}
+\def\Sb#1\Se{\begin{solution}#1\end{solution}}
+
+\newenvironment{claim}[1]{\par\noindent\underline{Claim:}\space#1}{}
+\newtheoremstyle{quest}{\topsep}{\topsep}{}{}{\bfseries}{}{ }{\thmname{#1}\thmnote{ #3}.}
+\theoremstyle{quest}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{question}{Question}
+\newtheorem*{preposition}{Preposition}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{challengeproblem}{Challenge Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{remark}{Remark}
+\usepackage{verbatimbox}
+\usepackage{listings}
+\usepackage{mathrsfs}
+\title{Durrett Probability: \\
+Problems}
+
+
+\author{
+Youngduck Choi \\
+CIMS \\
+New York University\\
+\texttt{yc1104@nyu.edu} \\
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\nipsfinalcopy % Uncomment for camera-ready version
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+This work contains solutions to the exercises of Durrett's probability book.
+\end{abstract}
+
+\bigskip
+
+\begin{question}[6.3.3]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-3-3.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+Here we assume countable state space. Observe that
+\eQnb
+p^{n}(x,y) &=& P_x(X_n = y) = P_x( \bigcup_{m=1}^{n} \{ T_y = m ; X_n = y \}) 
+\nonumber \\ 
+&=& E_x(1_{\{X_{n - T_y} = y\}} \circ \theta_{T_y} ; T_y \leq n) 
+= E_x(E_x( 1_{\{X_{n - T_y} = y\}} \circ \theta_{T_y} | \mathscr{F}_{T_y}) ; T_y \leq 
+n) \label{eq:6.3.3.1} \\
+&=& E_x( E_{X_{T_y}}(1_{\{X_{n - T_y} = y\}} ; T_y \leq n) 
+= E_x(E_y(1_{\{X_{n - T_y}\} });
+T_y \leq n) \label{eq:6.3.3.2} \\
+&=& \sum_{m=1}^{n} P_x(T_y = m) E_y(1_{\{ X_{n-m} = y\}}) = \sum_{m=1}^{n} P_x(
+T_y = m) P^{n-m}(y,y) \nonumber 
+\eQne
+where~\eqref{eq:6.3.3.1} holds by definition of conditional expectation 
+and~\eqref{eq:6.3.3.2} holds by the strong Markov property.  
+\end{solution}
+
+\newpage
+
+\begin{question}[6.3.4]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-3-4.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+\newpage
+
+\begin{question}[6.3.5]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-3-5.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+We assume countable state space. Observe that, for any $x \in S \setminus C$,
+we can choose $n(x) \in \mathbb{N}$ such that
+\eQb
+P(\tau_C \leq n) > 0, 
+\eQe
+as otherwise, by continuity of probability
+\eQb
+P(\tau_C < \infty) = \lim_{k \to \infty} P(\tau_C \leq k) = 0,
+\eQe
+which is a contradiction. Now, let
+\eQb
+\epsilon = \min_{z \in S \setminus C} P_z(\tau_C < \infty) \>\>\>
+\text{and} \>\>\> N = \max_{z \in S \setminus C} n(x). 
+\eQe
+Trivially,
+\eQb
+P_y(\tau_C > kN) = 0
+\eQe
+for any $k \in \mathbb{N}$, and $y \in C$, since $y \in C$ implies $\tau_C = 0$ 
+by definition. Therefore, it suffices to show 
+\eQnb
+P_y(\tau_C > kN) \leq (1-\epsilon)^k \label{eq:6.3.5.1}
+\eQne
+for all $k \in \mathbb{N}$ and $y \in S\setminus C$. Fix $y \in S \setminus C$.
+Then,
+\eQb
+P_y(\tau_C \leq N) \geq P_y(\tau_C < \infty) \geq \epsilon  
+\eQe
+and hence
+\eQb
+P_y(\tau_C > N) \leq (1-\epsilon)
+\eQe
+Now, we proceed by induction to prove~\eqref{eq:6.3.5.1}. Suppose, for some $k 
+\in \mathbb{N}$, 
+\eQb
+P_y(\tau_C > kN) \leq (1-\epsilon)^k.
+\eQe 
+We compute
+\eQnb
+P_y(T_c > (k+1)N) &=& E_y(1_{\{\tau_C > kN \}} \circ \theta_N ; \tau_C > N) 
+\nonumber \\
+&=& E_y(E_y((1_{\{ \tau_C > kN\} } \circ \theta_N | \mathscr{F}_N); \tau_C > N)) 
+\nonumber \\
+&=& E_y(E_{X_N}((1_{\{ \tau_C > kN\} }); \tau_C > N)) \label{eq:6.3.5.2} \\
+&\leq& E_y(\sup_{z \in S} P_z(\tau_C > kN); \tau_C > N)) \nonumber \\
+&\leq& (1-\epsilon)^k E_y(1; \tau_C > N)) = (1-\epsilon)^{k+1} \nonumber  
+\eQne
+where~\eqref{eq:6.3.5.2} holds by Markov Property, which completes the proof. 
+\hfill $\qed$
+
+\end{solution}
+
+\newpage
+
+\begin{question}[6.3.6]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-3-6.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+\newpage
+
+
+\begin{question}[6.3.7]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-3-7.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+
+
+\bigskip
+
+\end{document}

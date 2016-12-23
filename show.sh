@@ -1,1 +1,1 @@
-pdflatex pset13.tex && open pset13.pdf
+pdflatex durrett.tex && open durrett.pdf
