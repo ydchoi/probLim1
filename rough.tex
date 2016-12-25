@@ -249,6 +249,41 @@ where~\eqref{eq:6.3.6.1} holds by Markov property.
 
 \newpage
 
+\begin{question}[6.4.4]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-4-4.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+The key insight in this problem is that if you shift the chain by a stopping time
+of one variable, then the probability of the chain 
+coming back to another fixed variable decreases. 
+This relation allows one to estimate $p_{xz}$ from below
+using strong markov. 
+
+\bigskip
+
+
+\noindent Let $x,y,z \in S$. Then,
+\eQnb
+p_{xz} &=& P_x(T_z < \infty) = E_x( 1_{\{T_z < \infty\}}) 
+\geq E_x( 1_{\{T_z < \infty\}} \circ \theta_{T_y}) \nonumber \\
+&=& E_x( E_x(1_{\{T_z < \infty\}} \circ \theta_{T_y} |\mathscr{F}_{T_y}); T_y < \infty)
+\label{eq:6.4.4.1} \\
+&=& E_x( E_{X_{T_y}}(1_{\{ T_z < \infty \}} ; T_y < \infty) 
+= E_x( E_{X_y}(1_{\{T_z < \infty \}} ; T_y < \infty) \label{eq:6.4.4.2} \\ 
+&=& E_x( P_y( T_z < \infty) ; T_y < \infty) = P_y( T_z < \infty) P_x(T_y < \infty)
+= p_{xy} p_{yz} \nonumber 
+\eQne
+where~\eqref{eq:6.4.4.1} holds by definition of conditional expectation, 
+and~\eqref{eq:6.4.4.2} holds by strong Markov. \hfill $\qed$
+
+\end{solution}
+
+\newpage
+
 \section{Chapter 2: Law of Large Numbers}
 
 
