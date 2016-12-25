@@ -1,1 +1,1 @@
-pdflatex durrett.tex && open durrett.pdf
+pdflatex rough.tex && open rough.pdf

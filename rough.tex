@@ -1,20 +1,49 @@
-\documentclass{article} % For LaTeX2e
-\usepackage{nips14submit_e,times}
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem*{thm*}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem*{lem*}{Lemma}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{ques}[thm]{Question}
+\newtheorem*{rem}{Remark}
+
+
+\oddsidemargin  0pt
+\evensidemargin 0pt
+\marginparwidth 40pt
+\marginparsep 10pt
+\topmargin 0pt
+\headsep 10pt
+\textheight 8.2in
+\textwidth 6.4in
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand{\codeg}{\text{codeg}}
+\newcommand{\BBE}{\mathbb{E}}
+\newcommand{\BFP}{\mathbf{P}}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{hyperref}
 \usepackage{url}
-\usepackage{algorithm}
-\usepackage[noend]{algpseudocode}
-%\documentstyle[nips14submit_09,times,art10]{article} % For LaTeX 2.09
 
-\usepackage{bbm}
+
+
+
+
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{MnSymbol}
 
 \def\eQb#1\eQe{\begin{eqnarray*}#1\end{eqnarray*}}
 \def\eQnb#1\eQne{\begin{eqnarray}#1\end{eqnarray}}
@@ -26,12 +55,11 @@
 \newcommand{\E}{\mathrm{E}}
 \newcommand{\Var}{\mathrm{Var}}
 \newcommand{\Cov}{\mathrm{Cov}}
-\newcommand\eqD{\stackrel{\mathclap{\normalfont\mbox{d}}}{=}}
 
 \def\Qb#1\Qe{\begin{question}#1\end{question}}
 \def\Sb#1\Se{\begin{solution}#1\end{solution}}
 
-\newenvironment{claim}[1]{\par\noindent\underline{Claim:}\space#1}{}
+
 \newtheoremstyle{quest}{\topsep}{\topsep}{}{}{\bfseries}{}{ }{\thmname{#1}\thmnote{ #3}.}
 \theoremstyle{quest}
 \newtheorem*{definition}{Definition}
@@ -46,76 +74,27 @@
 \usepackage{verbatimbox}
 \usepackage{listings}
 \usepackage{mathrsfs}
-\title{Durrett Probability: \\
-Problems}
-
+\date{}
+\title{\vspace{-0.7cm}
+Durrett Probability: Problems}
 
 \author{
-Youngduck Choi \\
-CIMS \\
-New York University\\
-\texttt{yc1104@nyu.edu} \\
-}
-
-
-% The \author macro works with any number of authors. There are two commands
-% used to separate the names and addresses of multiple authors: \And and \AND.
-%
-% Using \And between authors leaves it to \LaTeX{} to determine where to break
-% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
-% puts 3 of 4 authors names on the first line, and the last on the second
-% line, try using \AND instead of \And before the third author name.
-
-\newcommand{\fix}{\marginpar{FIX}}
-\newcommand{\new}{\marginpar{NEW}}
-
-\nipsfinalcopy % Uncomment for camera-ready version
+Youngduck Choi 
+\thanks{Department of Mathematics,
+}}
 
 \begin{document}
-
 
 \maketitle
 
 \begin{abstract}
-This work contains solutions to the exercises of Durrett's probability book.
+This work contains solutions to some
+exercises from Durrett's probability
+text.
 \end{abstract}
 
-\bigskip
 
-\begin{question}[5.2.1]
-\hfill
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.7\textwidth]{d-5-2-1.png}
-\end{figure}
-\end{question}
-\begin{solution} \hfill \\
-\end{solution}
-
-\newpage
-
-\begin{question}[5.2.2]
-\hfill
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.7\textwidth]{d-5-2-2.png}
-\end{figure}
-\end{question}
-\begin{solution} \hfill \\
-\end{solution}
-
-\newpage
-
-\begin{question}[5.2.3]
-\hfill
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.7\textwidth]{d-5-2-3.png}
-\end{figure}
-\end{question}
-\begin{solution} \hfill \\
-\end{solution}
-
+\section{Chapter 6: Markov Chains} \label{sec:MC}
 
 \begin{question}[6.3.3]
 \hfill
@@ -268,7 +247,5 @@ where~\eqref{eq:6.3.6.1} holds by Markov property.
 \end{solution}
 
 
-
-\bigskip
 
 \end{document}
