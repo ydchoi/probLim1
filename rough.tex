@@ -154,8 +154,9 @@ P_x(\tau_C < \infty) = \lim_{k \to \infty} P_x(\tau_C \leq k) = 0,
 \eQe
 which is a contradiction. Now, let
 \eQb
-\epsilon = \min_{z \in S \setminus C} P_z(\tau_C < \infty) \>\>\>
-\text{and} \>\>\> N = \max_{z \in S \setminus C} n(x). 
+N = \max_{z \in S \setminus C} n(x). 
+\>\>\> \text{and} \>\>\>
+\epsilon = \min_{z \in S \setminus C} P_z(\tau_C \leq N).
 \eQe
 Trivially,
 \eQb
@@ -169,7 +170,7 @@ P_y(\tau_C > kN) \leq (1-\epsilon)^k \label{eq:6.3.5.1}
 for all $k \in \mathbb{N}$ and $y \in S\setminus C$. Fix $y \in S \setminus C$.
 Then,
 \eQb
-P_y(\tau_C \leq N) \geq P_y(\tau_C < \infty) \geq \epsilon  
+P_y(\tau_C \leq N) &\geq&  \epsilon. 
 \eQe
 and hence
 \eQb
@@ -246,6 +247,63 @@ where~\eqref{eq:6.3.6.1} holds by Markov property.
 \begin{solution} \hfill \\
 \end{solution}
 
+\newpage
+
+\section{Chapter 2: Law of Large Numbers}
+
+
+\newpage
+
+\section{Chapter 5: Martingales}
+
+\begin{question}[5.2.1]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-5-2-1.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+Various properties of conditional expectations are used.
+
+\bigskip
+
+We compute
+\eQnb
+E[X_{n+1}| \mathscr{F}_n] &=& E[X_{n+1} | \mathscr{G}_{n} | 
+\mathscr{F}_n] \label{eq:5.2.1.1} \\
+&=& E [X_n| \mathscr{F}_n] \label{eq:5.2.1.2} \\ 
+&=& X_n \label{eq:5.2.1.3}  
+\eQne
+for all $n \in \mathbb{N}$, where~\eqref{eq:5.2.1.1} holds by 
+the Tower property,~\eqref{eq:5.2.1.2} holds by Martingale property of $\{G_n\}$
+and~\eqref{eq:5.2.1.3} holds by measurability of $X_n$ w.r.t $\mathscr{F}_n$ for 
+all $n \in \mathbb{N}$.  \hfill $\qed$
+\end{solution}
+
+\newpage
+
+\begin{question}[5.2.2]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-5-2-2.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+\newpage
+
+\begin{question}[5.2.3]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-5-2-3.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
 
 
 \end{document}
