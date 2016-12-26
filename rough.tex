@@ -80,7 +80,7 @@ Durrett Probability: Problems}
 
 \author{
 Youngduck Choi 
-\thanks{Department of Mathematics, Courant Institute of Mathematical sciences, 
+\thanks{Department of Mathematics, Courant Institute of Mathematical Sciences, 
 yc1104@nyu.edu
 }}
 
@@ -132,6 +132,13 @@ and~\eqref{eq:6.3.3.2} holds by the strong Markov property.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Let $k \in \mathbb{N}$,
+and $T^{k}_x = \inf\{n \geq k : X_n = x \}$. Then, by the first entrance decomposition,
+\eQb
+\sum_{m=0}^{n} P_x(X_m = x) &=& \sum_{m=0}^{n} \left( \sum_{k=1}^{m} 
+P_x(T_x = k) p^{m-k}(x,x) \right) \\
+&=& \sum_{k=1}^{n} \left( P_x(T_x = k) \sum_{m=1}^{n}p^{0} \right)
+\eQe
 \end{solution}
 
 \newpage
@@ -259,15 +266,35 @@ where~\eqref{eq:6.3.6.1} holds by Markov property.
 \end{question}
 \begin{solution} \hfill \\
 The key insight in this problem is that if you shift the chain by a stopping time
-of one variable, then the probability of the chain 
-coming back to another fixed variable decreases. 
+of one state variable, then the probability of the chain 
+coming back to another fixed state variable decreases. 
 This relation allows one to estimate $p_{xz}$ from below
-using strong markov. 
+using strong Markov, which in our context is proven for a sequence space(discrete time)
+of a polish state space, using Monotone class theorem.  
+Recall that to define a shift operator, indexed by $\infty$,
+by convention, we set
+\eQb
+T_z(\triangle) = \infty \>\>\> \text{so} \>\>\> 1_{\{T_z < \infty\}}(\triangle) = 0,
+\eQe 
+where $T_z$ is a non-zero 
+hitting time for $\{z\} \subset S$ and $\triangle$ is the cemetery sample
+point, added to the sequence space $S^{\mathbb{N}}$. With this convention, 
+\eQb
+\{w \in S^{\mathbb{N}} : 1_{\{T_z < \infty\}} \circ \theta_{T_y}(w) = 1 \} &=& 
+\{w \in S^{\mathbb{N}} : 
+T_y(w) = n \text{ for some } n \geq 1 \>\>\> \\
+&& \text{and} \>\>\> T_z^{n}(w) = 
+\inf\{k \geq n : X_k = z\} < \infty \} \\
+&=& \bigcup_{n=1}^{\infty} \{T_y = n \>\> ; \>\> T_{z}^{n} < \infty \} \\
+&\subset& \bigcup_{n=1}^{\infty} \{T_z^{n} < \infty\} = \{ T_z < \infty \} 
+\eQe
+for any $z,y \in S$. 
 
 \bigskip
 
 
-\noindent Let $x,y,z \in S$. Then,
+\noindent 
+Now, let $x,y,z \in S$. Then,
 \eQnb
 p_{xz} &=& P_x(T_z < \infty) = E_x( 1_{\{T_z < \infty\}}) 
 \geq E_x( 1_{\{T_z < \infty\}} \circ \theta_{T_y}) \nonumber \\
