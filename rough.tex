@@ -156,7 +156,34 @@ and~\eqref{eq:6.3.3.2} holds by the strong Markov property. \hfill $\qed$
 \end{question}
 \begin{solution} \hfill \\
 Let $k \in \mathbb{N}$,
-and $T^{k}_x = \inf\{n \geq k : X_n = x \}$. 
+and $T^{k}_x = \inf\{n \geq k : X_n = x \}$. We claim that
+\eQnb
+P_x(X_m = x) &=& \sum_{l=k}^{m} P_x(T^{k}_x  = x)p^{m-l}(x,x) \label{eq:6.3.4.1} 
+\eQne 
+for any $m \geq k$. Fix $m \geq k$. Then,
+\eQnb
+P_x(X_m = x) &=& P_x(\bigcup_{l=k}^{m} \{ T^{k}_x = l; X_m = x\}) 
+= \sum_{l=k}^{m} P_x(T^{k}_x = l ; X_m = x)\label{eq:6.3.4.2} .
+\eQne
+Now, we compute 
+\eQnb
+P_x(T^k_x = l; X_m = x ) &=& E_x(1_{\{X_m = x\}} ; T_x^{k} = l) = E_x(E_x(
+1_{\{X_m = x\}} | \mathscr{F}_l) ; T_x^{k} = l) \nonumber \\
+&=& E_x(E_x(1_{\{X_{m-l} = x\}} \theta_{l} | \mathscr{F}_l); T_x^{k} = l) \nonumber \\
+&=& E_x(E_{X_l}(1_{\{ X_{m-l} = x\}} ; T_x^{k} = l);T_x^{k} = l) \label{eq:6.3.4.3} \\
+&=& E_x(P_x(X_{m-l} x); T_x^{k} = l) = P_x(X_{m-l} = x) P_x(T_x^{k} = l) \nonumber \\ 
+&=& P_x(T_x^{k} = l) p^{m-l}(x,x) \nonumber 
+\eQne
+for any $k \leq l \leq m$, where~\eqref{eq:6.3.4.3} holds by Markov property.
+Therefore, combining the above result with~\eqref{eq:6.3.4.2},
+we have proven~\eqref{eq:6.3.4.1}. Then,
+\eQb
+\sum_{m=k}^{n+k} P_x(X_m = x) &=& \sum_{m=k}^{n+k} \sum_{l=k}^{m} 
+P_x(T^{k}_x = l)p^{m-l}(x,x) \\
+&=& \sum_{m=k}^{n+k} p^{m}(x,x) \left( \sum_{l=k}^{d} P_x(T_x^{k} = l) \right) \\
+&\leq& \sum_{m=k}^{n+k} p^{m}(x,x) = \sum_{m=k}^{n+k} P_x(X_m = x)  \\ 
+\eQe 
+
 
 \end{solution}
 

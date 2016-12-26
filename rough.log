@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 DEC 2016 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 DEC 2016 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,81 +778,81 @@ File: d-6-3-4.png Graphic file (type png)
  <use d-6-3-4.png>
 Package pdftex.def Info: d-6-3-4.png used on input line 154.
 (pdftex.def)             Requested size: 323.76787pt x 21.28352pt.
- [3 <./d-6-3-4.png>] <d-6-3-5.png, id=63, 508.90125pt x 49.18375pt>
+ [3 <./d-6-3-4.png>] <d-6-3-5.png, id=69, 508.90125pt x 49.18375pt>
 File: d-6-3-5.png Graphic file (type png)
  <use d-6-3-5.png>
-Package pdftex.def Info: d-6-3-5.png used on input line 169.
+Package pdftex.def Info: d-6-3-5.png used on input line 196.
 (pdftex.def)             Requested size: 323.76787pt x 31.2921pt.
 
-[4 <./d-6-3-5.png>] <d-6-3-6.png, id=74, 512.91624pt x 150.5625pt>
+[4 <./d-6-3-5.png>] <d-6-3-6.png, id=80, 512.91624pt x 150.5625pt>
 File: d-6-3-6.png Graphic file (type png)
 
 <use d-6-3-6.png>
-Package pdftex.def Info: d-6-3-6.png used on input line 232.
+Package pdftex.def Info: d-6-3-6.png used on input line 259.
 (pdftex.def)             Requested size: 323.76787pt x 95.04095pt.
  [5 <./d-6-3-6.png>]
-<d-6-3-7.png, id=84, 517.935pt x 73.27374pt>
+<d-6-3-7.png, id=90, 517.935pt x 73.27374pt>
 File: d-6-3-7.png Graphic file (type png)
  <use d-6-3-7.png>
-Package pdftex.def Info: d-6-3-7.png used on input line 271.
+Package pdftex.def Info: d-6-3-7.png used on input line 298.
 (pdftex.def)             Requested size: 323.76787pt x 45.80602pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-[6 <./d-6-3-7.png>] <d-6-4-4.png, id=91, 502.87875pt x 33.12375pt>
+[6 <./d-6-3-7.png>] <d-6-4-4.png, id=97, 502.87875pt x 33.12375pt>
 File: d-6-4-4.png Graphic file (type png)
 
 <use d-6-4-4.png>
-Package pdftex.def Info: d-6-4-4.png used on input line 283.
+Package pdftex.def Info: d-6-4-4.png used on input line 310.
 (pdftex.def)             Requested size: 323.76787pt x 21.32597pt.
  [7 <./d-6-4-4.png>] [8]
-<d-5-2-1.png, id=106, 504.88625pt x 47.17625pt>
+<d-5-2-1.png, id=112, 504.88625pt x 47.17625pt>
 File: d-5-2-1.png Graphic file (type png)
  <use d-5-2-1.png>
-Package pdftex.def Info: d-5-2-1.png used on input line 350.
+Package pdftex.def Info: d-5-2-1.png used on input line 377.
 (pdftex.def)             Requested size: 323.76787pt x 30.25314pt.
- [9 <./d-5-2-1.png>] <d-5-2-2.png, id=117, 507.8975pt x 62.2325pt>
+ [9 <./d-5-2-1.png>] <d-5-2-2.png, id=123, 507.8975pt x 62.2325pt>
 File: d-5-2-2.png Graphic file (type png)
  <use d-5-2-2.png>
-Package pdftex.def Info: d-5-2-2.png used on input line 377.
+Package pdftex.def Info: d-5-2-2.png used on input line 404.
 (pdftex.def)             Requested size: 323.76787pt x 39.67197pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--381
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-[10 <./d-5-2-2.png>] <d-5-2-3.png, id=124, 507.8975pt x 49.18375pt>
+[10 <./d-5-2-2.png>] <d-5-2-3.png, id=130, 507.8975pt x 49.18375pt>
 File: d-5-2-3.png Graphic file (type png)
 
 <use d-5-2-3.png>
-Package pdftex.def Info: d-5-2-3.png used on input line 389.
+Package pdftex.def Info: d-5-2-3.png used on input line 416.
 (pdftex.def)             Requested size: 323.76787pt x 31.35364pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 [11 <./d-5-2-3.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 396.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 396.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
  (./rough.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 396.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 396.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
 Package rerunfilecheck Info: File `rough.out' has not changed.
 (rerunfilecheck)             Checksum: BA894E1908B16B6E8C48CB5E1DFB1E8C;182.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 396.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
  ) 
 Here is how much of TeX's memory you used:
- 18936 strings out of 493089
- 346720 string characters out of 6134842
- 414313 words of memory out of 5000000
- 22053 multiletter control sequences out of 15000+600000
+ 18942 strings out of 493089
+ 346795 string characters out of 6134842
+ 414398 words of memory out of 5000000
+ 22056 multiletter control sequences out of 15000+600000
  14531 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,54p,386b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -873,10 +873,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on rough.pdf (11 pages, 340715 bytes).
+Output written on rough.pdf (11 pages, 343247 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  82 words of extra memory for PDF output out of 10000 (max. 10000000)
 
