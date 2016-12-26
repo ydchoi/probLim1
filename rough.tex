@@ -81,7 +81,8 @@ Durrett Probability: Problems}
 \author{
 Youngduck Choi 
 \thanks{Department of Mathematics, Courant Institute of Mathematical Sciences, 
-yc1104@nyu.edu
+yc1104@nyu.edu; If you find an error and want to share with me, 
+you can reach me via email.
 }}
 
 \begin{document}
@@ -107,6 +108,28 @@ text.
 \begin{solution} \hfill \\
 Here we assume countable state space. Observe that
 \eQnb
+p^{n}(x,y) &=& P_x(X_n = y) = P_x( \bigcup_{m=1}^{n} \{ T_y = m \> ; \> X_n = y \}) 
+= \sum_{m=1}^{n} P_x(T_y = m \> ; \> X_n = y) \label{eq:6.3.3.0} 
+\eQne
+\eQnb
+P_x(T_y = m \> ; \> X_n = y) &=& E_x( 1_{\{X_n = y\}} \> ; \> T_y = m) \nonumber \\
+&=& E_x(E_x(1_{\{X_n = y\}} | \mathscr{F}_m) ; T_y = m) \label{eq:6.3.3.1} \\
+&=& E_x(E_x(1_{\{X_{n-m} = y \}} \circ \theta_m | \mathscr{F}_m) ; T_y = m) \nonumber \\ 
+&=& E_x(E_{X_m}(1_{\{X_{n-m} = y \}} ; T_y = m) = E_x(P_y(X_{n-m} = y); T_y = m) 
+\label{eq:6.3.3.2} \\ 
+&=& P_x( T_y = m) P_y(X_{n-m} = y) \nonumber
+\eQne
+for any $1 \leq m \leq n$, where~\eqref{eq:6.3.3.1} holds by definition of conditional
+expectation and~\eqref{eq:6.3.3.2} holds by Markov property.  
+Therefore, combining the above result with with~\eqref{eq:6.3.3.0} gives
+\eQb
+p^{n}(x,y) &=& \sum_{m=1}^{n} P_x(T_y = m) P_y(X_{n-m} = y).
+\eQe 
+
+\bigskip
+
+\noindent Here is another approach using strong Markov. We compute
+\eQnb
 p^{n}(x,y) &=& P_x(X_n = y) = P_x( \bigcup_{m=1}^{n} \{ T_y = m ; X_n = y \}) 
 \nonumber \\ 
 &=& E_x(1_{\{X_{n - T_y} = y\}} \circ \theta_{T_y} ; T_y \leq n) 
@@ -119,7 +142,7 @@ T_y \leq n) \label{eq:6.3.3.2} \\
 T_y = m) P^{n-m}(y,y) \nonumber 
 \eQne
 where~\eqref{eq:6.3.3.1} holds by definition of conditional expectation 
-and~\eqref{eq:6.3.3.2} holds by the strong Markov property.  
+and~\eqref{eq:6.3.3.2} holds by the strong Markov property. \hfill $\qed$ 
 \end{solution}
 
 \newpage
@@ -133,12 +156,8 @@ and~\eqref{eq:6.3.3.2} holds by the strong Markov property.
 \end{question}
 \begin{solution} \hfill \\
 Let $k \in \mathbb{N}$,
-and $T^{k}_x = \inf\{n \geq k : X_n = x \}$. Then, by the first entrance decomposition,
-\eQb
-\sum_{m=0}^{n} P_x(X_m = x) &=& \sum_{m=0}^{n} \left( \sum_{k=1}^{m} 
-P_x(T_x = k) p^{m-k}(x,x) \right) \\
-&=& \sum_{k=1}^{n} \left( P_x(T_x = k) \sum_{m=1}^{n}p^{0} \right)
-\eQe
+and $T^{k}_x = \inf\{n \geq k : X_n = x \}$. 
+
 \end{solution}
 
 \newpage
@@ -274,11 +293,16 @@ of a polish state space, using Monotone class theorem.
 Recall that to define a shift operator, indexed by $\infty$,
 by convention, we set
 \eQb
+\theta_{\infty}(w) = \triangle
+\eQe
+where $\triangle$ is the cemetery sample point we add to $S^{\mathbb{N}}$,
+for all $w \in S^{\mathbb{N}}$. Therefore, to extend the domain of $T_z = 
+\inf\{n \geq 1: X_n = z \}$ for any $z \in S$,
+to include $\triangle$, if necessary, we define
+\eQb
 T_z(\triangle) = \infty \>\>\> \text{so} \>\>\> 1_{\{T_z < \infty\}}(\triangle) = 0,
 \eQe 
-where $T_z$ is a non-zero 
-hitting time for $\{z\} \subset S$ and $\triangle$ is the cemetery sample
-point, added to the sequence space $S^{\mathbb{N}}$. With this convention, 
+With this convention.
 \eQb
 \{w \in S^{\mathbb{N}} : 1_{\{T_z < \infty\}} \circ \theta_{T_y}(w) = 1 \} &=& 
 \{w \in S^{\mathbb{N}} : 
