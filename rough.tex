@@ -180,8 +180,9 @@ we have proven~\eqref{eq:6.3.4.1}. Then,
 \eQb
 \sum_{m=k}^{n+k} P_x(X_m = x) &=& \sum_{m=k}^{n+k} \sum_{l=k}^{m} 
 P_x(T^{k}_x = l)p^{m-l}(x,x) \\
-&=& \sum_{m=k}^{n+k} p^{m}(x,x) \left( \sum_{l=k}^{d} P_x(T_x^{k} = l) \right) \\
-&\leq& \sum_{m=k}^{n+k} p^{m}(x,x) = \sum_{m=k}^{n+k} P_x(X_m = x)  \\ 
+&=& \sum_{l = k}^{n+k} \sum_{m = l}^{n+k} P_x(T^{k}_x = l) p^{m-l}(x,x) \\ 
+&=& \sum_{m=0}^{n} p^{m}(x,x) \left( \sum_{l=k}^{d} P_x(T_x^{k} = l) \right) \\
+&\leq& \sum_{m=0}^{n} p^{m}(x,x) = \sum_{m=0}^{n} P_x(X_m = x)  \\ 
 \eQe 
 
 
@@ -296,6 +297,42 @@ where~\eqref{eq:6.3.6.1} holds by Markov property.
 \begin{figure}[h!]
   \centering
     \includegraphics[width=0.7\textwidth]{d-6-3-7.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+\newpage
+
+\begin{question}[6.4.1]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-4-1.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+\newpage
+
+\begin{question}[6.4.2]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-4-2.png}
+\end{figure}
+\end{question}
+\begin{solution} \hfill \\
+\end{solution}
+
+\newpage
+
+\begin{question}[6.4.3]
+\hfill
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.7\textwidth]{d-6-4-3.png}
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
@@ -482,6 +519,21 @@ we have the desired example. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Set $\xi_n = -1$ with probability $2^{-1}$ and $\xi_n = 2^{n}$ with probability
+$2^{-(n+1)}$ 
+for each $n \in \mathbb{N}$, such that they are independent. Then, by construction, 
+\eQb
+E[X_{n+1}| \mathscr{F}_n] &=& E[\xi_{n+1}] + E[X_n|\mathscr{F}_n] = X_n
+\eQe
+for all $n \in \mathbb{N}$, so $\{X_n\}$ is a martingale. Now, as
+\eQb
+\sum_{n=1}^{\infty} P(\xi_n \leq -1) = \infty
+\eQe
+by Borel-Cantelli II,
+\eQb
+P(\xi_n \leq -1 \>\>\> \text{i.o} ) = 1 \>\>\> \text{and} \>\>\> P(X_n \to -\infty) = 1,
+\eQe
+as required. \hfill $\qed$
 \end{solution}
 
 \newpage
@@ -506,6 +558,11 @@ we have the desired example. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+We compute
+\eQb
+E[S_{n+1}^2 - s_{n+1}^2 | \mathscr{F}_n] &=& 
+E[(\sum_{k=1}^{n+1} \xi_n)^2 - \sum_{k=1}^{n+1} \sigma_k^2 | \mathscr{F}_n] \\ 
+\eQe
 \end{solution}
 
 \newpage
