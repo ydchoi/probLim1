@@ -561,10 +561,12 @@ as required. \hfill $\qed$
 \end{question}
 \begin{solution} \hfill \\
 We compute
-\eQb
-E[S_{n+1}^2 - s_{n+1}^2 | \mathscr{F}_n] &=& 
-E[(\sum_{k=1}^{n+1} \xi_n)^2 - \sum_{k=1}^{n+1} \sigma_k^2 | \mathscr{F}_n] \\ 
-\eQe
+\eQnb
+E(S_{n+1}^2 - s_{n+1}^2 | \mathscr{F}_n) &=& 
+E(S_n^2 | \mathscr{F}_n) + E(\xi_{n+1}^2 | \mathscr{F}_n) 
++ 2E(\xi_{n+1} S_n | \mathscr{F}_n) - s_{n+1}^2 \\
+&=& S_n^2 + E(\xi_{n+1}^2) +  
+\eQne
 \end{solution}
 
 \newpage
@@ -577,6 +579,25 @@ E[(\sum_{k=1}^{n+1} \xi_n)^2 - \sum_{k=1}^{n+1} \sigma_k^2 | \mathscr{F}_n] \\
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Observe that
+\eQb
+1 + y \leq e^{y}
+\eQe
+and hence
+\eQb
+log(1+y) \leq y 
+\eQe
+for all $y \in \mathbb{R}$. Now, fix $|y| \leq 2^{-1}$. Then,
+\eQb
+\log(1+y) &=& \sum_{n=1}^{\infty} (-1)^{n-1} \dfrac{y^n}{n}. \\
+&\geq& y - |\sum_{n=2}^{\infty} (-1)^{n-1} \dfrac{y^n}{n}| \\
+&\leq& y - \dfrac{y^2}{2} (\sum_{n=1}^{\infty} \dfrac{1}{2^{n-1}}) = y + y^2. 
+\eQe 
+Therefore,
+\eQb
+|y| \leq 2^{-1} &\implies& y - y^2 \leq(1+y) 
+\eQe
+
 \end{solution}
 
 \newpage
@@ -672,6 +693,51 @@ $X_{\infty} = 0$ almost surely, and $X_n \to 0$ almost surely.
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+The key idea in this problem is that one can make a use of Taylor estimates of
+exponential and log, to prove convergence of a product($x \mapsto x^2$ is is below
+$x \mapsto x$ for any $|x| \leq 1$!). 
+
+\bigskip
+
+\noindent Observe that
+\eQb
+1 + y \leq e^{y}
+\eQe
+and hence
+\eQb
+\log(1+y) \leq y 
+\eQe
+for all $y > -1$. Now, fix $|y| \leq 2^{-1}$. Then,
+\eQb
+\log(1+y) &=& y - \dfrac{y^2}{2} + \dfrac{y^3}{3} + \cdot\cdot\cdot  \\
+&\geq& y - \left|-\dfrac{y^2}{2} + \dfrac{y^3}{3} + \cdot\cdot\cdot \right|  \\
+&\geq& y - \dfrac{y^2}{2} \left|1 + \dfrac{1}{2} + \cdot\cdot\cdot  \right| = y - y^2 \\
+\eQe 
+Therefore,
+\eQb
+|y| \leq 2^{-1} &\implies& y - y^2 \leq \log(1+y) \leq y.
+\eQe
+Now, as $\sum_{n=1}^{\infty} |y_n| < \infty$, we can choose $M$ large enough such that
+\eQnb
+|y_n| &\leq& 2^{-1} \label{eq:5.2.10.1}  
+\eQne
+for all $n \geq M$. Since $\sum_{n=1}^{\infty} |y_n| < \infty$ and~\eqref{eq:5.2.10.1},
+$\sum_{n=M}^{\infty} y_n$ and $\sum_{n=M}^{\infty} y_n^2$ converge, and hence
+$\sum_{n=M}^{\infty} y_n - y_n^2$ converges. By comparison,
+\eQb
+\sum_{n=k}^{\infty} y_n - y_n^2 \leq \sum_{n = k}^{\infty} \log(1 + y_n) 
+\leq \sum_{n=k}^{\infty} y_n
+\eQe 
+for all $k \geq M$. Letting $k \to \infty$,
+\eQb
+\sum_{n=k}^{\infty} \log(1+y_n) \to 0 
+\eQe
+and hence
+\eQb
+\sum_{n=1}^{m} \log(1+y_n) = \log(\prod_{n=1}^{m}(1+y_n))  \>\>\>  \text{converges.} 
+\eQe
+By continuity of $\log$, $\prod_{n=1}^{\infty}(1+y_n)$ exists. \hfill $\qed$ 
+
 \end{solution}
 
 \newpage
