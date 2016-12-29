@@ -564,9 +564,14 @@ We compute
 \eQnb
 E(S_{n+1}^2 - s_{n+1}^2 | \mathscr{F}_n) &=& 
 E(S_n^2 | \mathscr{F}_n) + E(\xi_{n+1}^2 | \mathscr{F}_n) 
-+ 2E(\xi_{n+1} S_n | \mathscr{F}_n) - s_{n+1}^2 \\
-&=& S_n^2 + E(\xi_{n+1}^2) +  
++ 2E(\xi_{n+1} S_n | \mathscr{F}_n) - s_{n+1}^2 \nonumber \\
+&=& S_n^2 + E(\xi_{n+1}^2) +  2S_n E(\xi_n) - s_{n+1}^2 \label{eq:5.2.6.1} \\
+&=& S_n^2 - s_{n}^2 \label{eq:5.2.6.2}  
 \eQne
+for any $n \geq 1$,
+where~\eqref{eq:5.2.6.1} holds by independence of $\xi_{n+1}$ with $\mathscr{F}_n$
+and~\eqref{eq:5.2.6.2} holds, as $E(\xi_n) = 0$ for any $n \geq 1$, and  
+by Cauchy-Schwartz, $\xi_{n+1} S_n \in L^1$. \hfill $\qed$
 \end{solution}
 
 \newpage
@@ -859,6 +864,8 @@ as required. \hfill $\qed$
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+
 \end{solution}
+
 
 \end{document}
